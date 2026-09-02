@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="赤记 RED">
+  <rect width="32" height="32" rx="8" fill="#FF2442"/>
+  <rect x="8" y="6" width="16" height="20" rx="2.2" fill="#FFFFFF"/>
+  <path d="M13.2 11.4v9.2L22 16z" fill="#FF2442"/>
+</svg>
