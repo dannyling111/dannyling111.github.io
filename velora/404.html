@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <title>VELORA 映堂</title>
+    <script>
+      (function () {
+        var base = "/velora";
+        var path = location.pathname || "/";
+        if (path.indexOf(base) === 0) path = path.slice(base.length) || "/";
+        if (path.charAt(0) !== "/") path = "/" + path;
+        location.replace(base + "/#" + path + location.search);
+      })();
+    </script>
+  </head>
+  <body>
+    <p><a href="/velora/">打开 VELORA 映堂</a></p>
+  </body>
+</html>
