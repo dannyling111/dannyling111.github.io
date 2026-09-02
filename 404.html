@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NEXORA</title>
+    <script>
+      (function () {
+        var path = location.pathname || "/";
+        var apps = ["/nexora/", "/nightfield/", "/voxel-cast/", "/velora/", "/chi-ji-red/"];
+        var hit = apps.find(function (p) { return path.indexOf(p) === 0; });
+        if (hit) {
+          try { sessionStorage.setItem("spa-redirect", path + location.search + location.hash); } catch (e) {}
+          location.replace(hit);
+          return;
+        }
+        location.replace("/");
+      })();
+    </script>
+  </head>
+  <body>
+    <p><a href="/nexora/">NEXORA</a></p>
+  </body>
+</html>
