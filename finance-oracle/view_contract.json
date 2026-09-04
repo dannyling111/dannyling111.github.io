@@ -1,0 +1,14 @@
+{
+  "schema": "finance-oracle.view.v1",
+  "views": ["macro", "assets", "evidence", "health"],
+  "required_fields": ["forecast_as_of", "data_cutoff", "system_status", "headline", "macro", "assets", "evidence", "health"],
+  "empty": {
+    "macro": "无宏观 nowcast",
+    "assets": "无资产预测",
+    "evidence": "无可用证据",
+    "health": "无健康指标"
+  },
+  "degraded": "DEGRADED/ABSTAIN 必须在页眉与正文可见，不得伪装 OK。",
+  "mobile": "390x844 信息优先级：状态 → 标题 → 体制 → 六块 → 核心资产。",
+  "contract": "任何 view 只读 WebSnapshot，不读 provider 或模型实现。"
+}
