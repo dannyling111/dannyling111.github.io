@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>魔尺工坊 · Snake Lab</title>
+    <meta name="description" content="一条链，四向铰链，七十万亿种形态。24 / 36 / 48 段铰链链的 3D 工坊。" />
+    <meta name="theme-color" content="#09090b" />
+    <meta name="snake-lab-build" content="20260907d" />
+    <meta property="og:title" content="魔尺工坊 · Snake Lab" />
+    <meta property="og:description" content="一条链，四向铰链，七十万亿种形态" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dannyling111.github.io/a129-snake-lab/" />
+    <meta property="og:image" content="https://dannyling111.github.io/A129/snake-lab/og.jpg" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2309090b'/%3E%3Cpath d='M6 22 L14 10 L22 22 Z' fill='%235eead4'/%3E%3Cpath d='M10 22 L18 10 L26 22 Z' fill='%23e53935'/%3E%3C/svg%3E" />
+    <style>
+      html, body, #app {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+        background: #09090b;
+        color: #f4f4f5;
+        overflow: hidden;
+        font-family: "Segoe UI", system-ui, sans-serif;
+      }
+    </style>
+    <script>
+      if (!location.pathname.endsWith("/") && !/\.[a-z0-9]+$/i.test(location.pathname)) {
+        location.replace(location.pathname + "/" + location.search + location.hash);
+      }
+    </script>
+    <script type="module" crossorigin src="./assets/app-20260907d.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/style-20260907d.css">
+  </head>
+  <body>
+    <div id="app">
+      <div id="boot" style="position:fixed;inset:0;background:#09090b;color:#f4f4f5;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px">
+        <div style="font-size:22px;font-weight:700;letter-spacing:-0.03em">魔尺工坊</div>
+        <div style="font-size:13px;color:#a1a1aa">Snake Lab · 正在载入</div>
+      </div>
+    </div>
+    <script>
+      window.setTimeout(function () {
+        var boot = document.getElementById("boot");
+        if (boot && !window.__snakeReady) {
+          boot.innerHTML =
+            '<div style="font-size:22px;font-weight:700">魔尺工坊</div>' +
+            '<div style="font-size:13px;color:#f87171;max-width:280px;text-align:center;line-height:1.5">脚本没有载入。请硬刷新，或改用仓库里的 GitHub Pages 地址。</div>';
+        }
+      }, 12000);
+    </script>
+  </body>
+</html>
