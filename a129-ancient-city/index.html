@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#eeeadf"><meta name="description" content="以量化规则随机营造中国古城。水系先行，街巷相连，1、2、4、8格院落依地而建。">
+<title>一城一境 · 历史地图与营造资源库</title><link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<meta property="og:title" content="一城一境 · 历史地图与营造资源库">
+<meta property="og:description" content="清明上河图与故宫三维布局复原，以及程序化古城生成。">
+<meta property="og:image" content="https://dannyling111.github.io/a129-ancient-city/og.jpg">
+<meta property="og:url" content="https://dannyling111.github.io/a129-ancient-city/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="一城一境 · 历史地图与营造资源库">
+<meta name="twitter:image" content="https://dannyling111.github.io/a129-ancient-city/og.jpg">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="masthead">
+  <a class="brand" href="#" aria-label="一城一境首页"><span class="seal" aria-hidden="true">城</span><span><strong>一城一境</strong><small>古城营造实验室</small></span></a>
+  <div class="seedbox"><label for="seed">地图种子</label><input id="seed" value="清溪-1086" spellcheck="false" maxlength="80"><button id="random-seed-btn" class="icon-button" title="换个种子" aria-label="换个随机种子"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M8 8h.01M16 8h.01M12 12h.01M8 16h.01M16 16h.01" stroke-linecap="round" stroke-width="3"/></svg></button></div>
+  <button id="generate-btn" class="primary"><svg viewBox="0 0 24 24"><path d="M19 7a8 8 0 1 0 1 8M19 3v5h-5"/></svg><span>生成古城</span></button>
+  <button id="help-btn" class="subtle desktop-only">营造规则 <span>↗</span></button>
+</header>
+<div id="panel-backdrop" class="panel-backdrop" hidden></div>
+<aside id="settings" class="settings" aria-label="城市参数">
+  <div class="panel-heading"><div><span class="eyebrow">营造手册</span><h2>城，因地而生。</h2></div><button id="close-panel-btn" class="icon-button mobile-only" aria-label="关闭参数">×</button></div>
+  <label class="field-label" for="map-select">地图类型</label><select id="map-select"><option value="random">自由营造 · 随机古城</option><option value="qingming-scroll">清明上河图 · 张择端本</option><option value="forbidden-city">故宫 · 紫禁城</option></select>
+  <section id="heritage-panel" hidden><p class="parameter-note">据资料复原。坐标和多数尺寸为推定，可逐步用测绘资料替换。</p><div id="heritage-landmarks"></div><details><summary>来源与还原边界</summary><div id="heritage-sources"></div></details></section>
+  <div id="random-panel"><div class="section-label"><span>01</span> 城市格局</div>
+  <div class="presets" aria-label="布局预设"><button data-preset="water" class="selected">江南水乡</button><button data-preset="capital">规整府城</button><button data-preset="garden">疏林院落</button></div>
+  <label class="field-label" for="size">城池规模</label><select id="size"><option value="small">县城 · 46 × 38 格</option><option value="medium" selected>府城 · 58 × 46 格</option><option value="large">大城 · 70 × 54 格</option></select>
+  <div class="range-field"><label for="water">水系丰度</label><output for="water" id="water-value">48</output><input id="water" type="range" min="0" max="100" value="48"><div class="range-scale"><span>少水</span><span>河湖交织</span></div></div>
+  <div class="range-field"><label for="streetSpacing">街巷间距</label><output for="streetSpacing" id="streetSpacing-value">9 格</output><input id="streetSpacing" type="range" min="6" max="12" value="9"><div class="range-scale"><span>细密</span><span>疏朗</span></div></div>
+  <div class="section-label second"><span>02</span> 建筑与草木</div>
+  <div class="range-field"><label for="density">建筑填充</label><output for="density" id="density-value">66</output><input id="density" type="range" min="0" max="100" value="66"></div>
+  <div class="range-field"><label for="largeLots">大院比例</label><output for="largeLots" id="largeLots-value">44</output><input id="largeLots" type="range" min="0" max="100" value="44"></div>
+  <div class="range-field"><label for="greenery">草木丰度</label><output for="greenery" id="greenery-value">58</output><input id="greenery" type="range" min="0" max="100" value="58"></div>
+  <p class="parameter-note" id="parameter-note">参数修改后，点击「生成古城」。</p>
+  <div class="lot-heading"><span>地块素材</span><span>1 格 = 36 m²</span></div>
+  <div class="lot-catalog">
+    <div><i class="lot lot-one"></i><strong>1 格</strong><small>独宅</small><b id="count-1">—</b></div>
+    <div><i class="lot lot-two"></i><strong>2 格</strong><small>铺面</small><b id="count-2">—</b></div>
+    <div><i class="lot lot-four"></i><strong>4 格</strong><small>院落</small><b id="count-4">—</b></div>
+    <div><i class="lot lot-eight"></i><strong>8 格</strong><small>书院</small><b id="count-8">—</b></div>
+  </div>
+  </div><section class="asset-library"><details><summary>建筑与环境资源库</summary><label class="field-label" for="asset-search">搜索资源</label><input id="asset-search" type="search" placeholder="宫殿、桥梁、柳树…"><select id="asset-category" aria-label="资源分类"><option value="all">全部分类</option></select><div id="asset-list"></div><div id="asset-preview"><p>选择资源，在主视图中观察同一套模型。</p></div><div id="asset-parameters" hidden><div class="asset-size-grid"><label>宽 / m<input id="asset-w" type="number" min="0.01" max="2000" step="0.1"></label><label>深 / m<input id="asset-d" type="number" min="0.01" max="2000" step="0.1"></label><label>高 / m<input id="asset-h" type="number" min="0.01" max="2000" step="0.1"></label></div><button id="asset-apply-btn">更新模型尺寸</button></div><button id="asset-export-btn" disabled>导出模型与参数 ↓</button></details></section>
+  <div class="file-actions"><button id="export-btn">保存地图 <span>↓</span></button><label class="file-button" for="import-input">导入地图 <span>↑</span><input id="import-input" type="file" accept="application/json,.json"></label></div>
+  <button id="rules-mobile-btn" class="link-button">查看量化规则与限制条件 ↗</button>
+</aside>
+<main id="stage" aria-label="古城沙盘">
+  <div class="map-caption"><span class="eyebrow">千城，皆有其序</span><h2 id="city-name">清溪府</h2><p id="map-description">河湖入城 · 街巷相生</p><button id="return-map-btn" hidden>← 返回地图</button></div>
+  <div class="map-coordinate"><span id="map-dimensions">348 × 276 m</span><small id="map-precision">程序化古城 · 非历史复原</small></div>
+  <div id="viewport" aria-label="拖动旋转古城，双指缩放，点击建筑查看占地"></div>
+  <div id="loading" class="loading" hidden><span></span>正在营造古城…</div>
+  <div id="view-notice" class="view-notice" hidden></div>
+  <div id="building-info" class="building-info" hidden><button id="close-info" class="close-info" aria-label="关闭建筑信息">×</button><span class="eyebrow">地块档案</span><h3 id="building-name"></h3><p id="building-detail"></p><span class="checked">临街入口已连通</span></div>
+  <div class="map-controls"><div class="view-tabs" role="group" aria-label="沙盘视图"><button data-view="3d" class="active" aria-pressed="true">三维沙盘</button><button data-view="top" aria-pressed="false">俯瞰地图</button><button data-view="lots" aria-pressed="false">占地检查</button></div><button id="fit-btn" class="icon-button" title="全城视野" aria-label="恢复全城视野"><svg viewBox="0 0 24 24"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg></button><button id="pause-btn" class="icon-button" title="暂停行人" aria-label="暂停行人"><svg viewBox="0 0 24 24"><path d="M9 5v14M15 5v14"/></svg></button></div>
+  <p class="gesture-help" id="gesture-help">拖动旋转 · 滚轮缩放 · 右键平移 · 点击建筑查看地块</p>
+  <div id="lots-legend" class="lots-legend" hidden><span><i style="background:#76968c"></i>1 格</span><span><i style="background:#a8a57a"></i>2 格</span><span><i style="background:#bd8b61"></i>4 格</span><span><i style="background:#886f77"></i>8 格</span></div>
+</main>
+<footer class="statusbar"><button id="open-panel-btn" class="mobile-only">调参</button><button id="validation-btn" class="validation"><span class="status-dot"></span><span id="validation-summary">检查布局</span><span class="status-arrow">↗</span></button><div class="stat"><b id="stat-buildings">—</b><span>建筑</span></div><div class="stat"><b id="stat-trees">—</b><span>树木</span></div><div class="stat"><b id="stat-bridges">—</b><span>座桥</span></div><div class="stat desktop-only"><b id="stat-area">—</b><span>建筑占地</span></div><span id="status" role="status" aria-live="polite"></span></footer>
+<dialog id="rules-dialog" aria-labelledby="rules-title"><div class="dialog-heading"><div><span class="eyebrow">从约束到城市</span><h2 id="rules-title">营造规则</h2></div><button id="close-rules-btn" class="icon-button" aria-label="关闭规则">×</button></div>
+<p class="dialog-intro">先确定哪些地方能建，再选择放什么。所有三维物件都由这份地块数据生成。</p>
+<p class="historical-rule">历史地图采用独立的连续坐标与固定布局；1／2／4／8格规则仅用于自由营造。故宫外框依据馆方尺寸，其余推定项在地图来源中列明。</p><div class="rule-sequence"><span>水域与城界</span><span>街道与桥</span><span>8 → 4 → 2 → 1 格</span><span>草木与行人</span></div>
+<div id="checks-list" class="checks-list"></div>
+<details><summary>占地规格与可变参数</summary><table><thead><tr><th>类型</th><th>地块形状</th><th>占地面积</th></tr></thead><tbody><tr><td>独宅</td><td>1 × 1</td><td>36 m²</td></tr><tr><td>铺面</td><td>1 × 2 / 2 × 1</td><td>72 m²</td></tr><tr><td>院落</td><td>2 × 2 / 1 × 4 / 4 × 1</td><td>144 m²</td></tr><tr><td>书院、寺院、府署</td><td>2 × 4 / 4 × 2</td><td>288 m²</td></tr></tbody></table><p>种子决定随机序列；水系参数控制河宽、湖面尺度；街巷间距 6–12 格；填充和绿化参数控制候选投放，大院比例调整 8 格建筑的分配。用地不足时保留空地。</p></details>
+<details><summary>程序如何决定可以放在哪里？</summary><p>可建地块的每格必须同时满足：是陆地、没有被占用、位于城墙内。至少一格入口与连通街道相邻。建筑放置完成后，树木只从剩余陆地中抽样。行人沿道路四邻接图逐格移动，跨水只走桥。</p><p>建筑渲染在各自地块内留退距；地块面积包含院内留白。填充参数是投放强度，不等于最终全城覆盖率。最后独立核算面积、占用、道路连通与实体清单。</p></details>
+<p class="rules-footnote">这些数值是本生成器的设计约束。参考沙盘的视觉与组织方式，不把它当作古代城市的统一历史标准。</p><div class="dialog-links"><a href="./rules.md" download>下载规则说明 ↓</a><a href="./model.mjs" download>下载量化程序 ↓</a></div>
+</dialog>
+<div id="toast" class="toast" role="status" hidden></div>
+<script type="module" src="./app.mjs"></script>
+</body></html>

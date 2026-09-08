@@ -1,0 +1,932 @@
+{
+  "schema": "a129-heritage-catalog/v1",
+  "version": "1.0.0",
+  "units": "metres",
+  "assets": [
+    {
+      "id": "song-house",
+      "label": "宋式民居",
+      "category": "民居",
+      "periods": [
+        "北宋（画卷场景）"
+      ],
+      "tags": [
+        "街巷",
+        "乡村",
+        "悬山",
+        "灰瓦"
+      ],
+      "description": "朴素木构民居，屋顶和开间参数为推定。",
+      "defaultSize": {
+        "w": 12,
+        "d": 9,
+        "h": 8
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      },
+      "placement": "land",
+      "sourceIds": [
+        "scroll"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "song-shop",
+      "label": "沿街商铺",
+      "category": "街市",
+      "periods": [
+        "北宋（画卷场景）"
+      ],
+      "tags": [
+        "店铺",
+        "招幌",
+        "沿街"
+      ],
+      "description": "开敞铺面与挑檐，取宋画街市意象。",
+      "defaultSize": {
+        "w": 12,
+        "d": 8,
+        "h": 8
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      },
+      "placement": "land",
+      "sourceIds": [
+        "scroll"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "song-winehouse",
+      "label": "酒楼",
+      "category": "街市",
+      "periods": [
+        "北宋（画卷场景）"
+      ],
+      "tags": [
+        "酒楼",
+        "彩楼",
+        "欢门"
+      ],
+      "description": "双层酒楼与招牌，细部按画意推定。",
+      "defaultSize": {
+        "w": 19,
+        "d": 15,
+        "h": 15
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      },
+      "placement": "land",
+      "sourceIds": [
+        "scroll"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "song-teahouse",
+      "label": "茶肆",
+      "category": "街市",
+      "periods": [
+        "北宋（画卷场景）"
+      ],
+      "tags": [
+        "茶馆",
+        "茶棚",
+        "木构"
+      ],
+      "description": "临街饮茶休憩建筑。",
+      "defaultSize": {
+        "w": 17,
+        "d": 12,
+        "h": 10
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      },
+      "placement": "land",
+      "sourceIds": [
+        "scroll"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "market-stall",
+      "label": "摊棚",
+      "category": "街市",
+      "periods": [
+        "北宋（画卷场景）"
+      ],
+      "tags": [
+        "棚架",
+        "商贩",
+        "摊位"
+      ],
+      "description": "木柱与布棚组合，可调整棚面色与宽度。",
+      "defaultSize": {
+        "w": 4,
+        "d": 3,
+        "h": 3.2
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      },
+      "placement": "roadside",
+      "sourceIds": [
+        "scroll"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "hongqiao-bridge",
+      "label": "虹桥",
+      "category": "桥梁",
+      "periods": [
+        "北宋（画卷场景）"
+      ],
+      "tags": [
+        "木拱",
+        "叠梁",
+        "无墩",
+        "虹桥"
+      ],
+      "description": "张择端原本的木拱桥形制，跨度与结构细分为推定。",
+      "defaultSize": {
+        "w": 64,
+        "d": 16,
+        "h": 13
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      },
+      "placement": "bridge",
+      "sourceIds": [
+        "scroll"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "stone-arch-bridge",
+      "label": "白石单孔拱桥",
+      "category": "桥梁",
+      "periods": [
+        "明清"
+      ],
+      "tags": [
+        "金水桥",
+        "汉白玉",
+        "栏板"
+      ],
+      "description": "白石单孔拱桥，可用于五座并列内金水桥。",
+      "defaultSize": {
+        "w": 26,
+        "d": 7,
+        "h": 5
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      },
+      "placement": "bridge",
+      "sourceIds": [
+        "jinshui"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "canal-boat",
+      "label": "客舟",
+      "category": "舟车",
+      "periods": [
+        "北宋（画卷场景）"
+      ],
+      "tags": [
+        "篷船",
+        "汴河",
+        "舟"
+      ],
+      "description": "窄船体与篷舱，尺寸推定。",
+      "defaultSize": {
+        "w": 4.5,
+        "d": 14,
+        "h": 5
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      },
+      "placement": "water",
+      "sourceIds": [
+        "scroll"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "cargo-boat",
+      "label": "漕运货船",
+      "category": "舟车",
+      "periods": [
+        "北宋（画卷场景）"
+      ],
+      "tags": [
+        "货船",
+        "桅杆",
+        "船工"
+      ],
+      "description": "货船、舱篷与桅杆，按画意重建。",
+      "defaultSize": {
+        "w": 8,
+        "d": 27,
+        "h": 10
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      },
+      "placement": "water",
+      "sourceIds": [
+        "scroll"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "horse-cart",
+      "label": "马车",
+      "category": "舟车",
+      "periods": [
+        "北宋（画卷场景）"
+      ],
+      "tags": [
+        "车轮",
+        "车马",
+        "运输"
+      ],
+      "description": "马、双轮、车厢组成的可复用交通物件。",
+      "defaultSize": {
+        "w": 3,
+        "d": 6,
+        "h": 3.4
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      },
+      "placement": "road",
+      "sourceIds": [
+        "scroll"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "person",
+      "label": "行人",
+      "category": "人物",
+      "periods": [
+        "北宋（画卷场景）"
+      ],
+      "tags": [
+        "人物",
+        "行人",
+        "宋服"
+      ],
+      "description": "几何化人物，动作与服饰为推定。",
+      "defaultSize": {
+        "w": 0.7,
+        "d": 0.7,
+        "h": 1.7
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      },
+      "placement": "road",
+      "sourceIds": [
+        "scroll"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "willow",
+      "label": "垂柳",
+      "category": "植物",
+      "periods": [
+        "北宋（画卷场景）"
+      ],
+      "tags": [
+        "柳树",
+        "河岸",
+        "春树"
+      ],
+      "description": "枝垂的河岸柳树。",
+      "defaultSize": {
+        "w": 8,
+        "d": 8,
+        "h": 11
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      },
+      "placement": "land",
+      "sourceIds": [
+        "scroll"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "pine",
+      "label": "松柏",
+      "category": "植物",
+      "periods": [
+        "明清"
+      ],
+      "tags": [
+        "松",
+        "柏",
+        "御花园",
+        "常青"
+      ],
+      "description": "分层针叶树冠，园林填充。",
+      "defaultSize": {
+        "w": 7,
+        "d": 7,
+        "h": 12
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      },
+      "placement": "land",
+      "sourceIds": [
+        "buildings"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "scholar-tree",
+      "label": "国槐",
+      "category": "植物",
+      "periods": [
+        "北宋（画卷场景）"
+      ],
+      "tags": [
+        "槐",
+        "树冠",
+        "街道"
+      ],
+      "description": "高干阔叶树，适合街巷和庭院。",
+      "defaultSize": {
+        "w": 9,
+        "d": 9,
+        "h": 12
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      },
+      "placement": "land",
+      "sourceIds": [
+        "scroll"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "city-gate",
+      "label": "城门楼",
+      "category": "门墙",
+      "periods": [
+        "北宋（画卷场景）"
+      ],
+      "tags": [
+        "城门",
+        "东角子门",
+        "城楼"
+      ],
+      "description": "下层留通道，上层门楼；宋图城门名称依通常识读。",
+      "defaultSize": {
+        "w": 28,
+        "d": 18,
+        "h": 25
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      },
+      "placement": "gate",
+      "sourceIds": [
+        "scroll"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "city-wall",
+      "label": "城墙段",
+      "category": "门墙",
+      "periods": [
+        "北宋（画卷场景）"
+      ],
+      "tags": [
+        "城墙",
+        "垛口",
+        "防御"
+      ],
+      "description": "砖石城墙和垛口。",
+      "defaultSize": {
+        "w": 40,
+        "d": 7,
+        "h": 14
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      },
+      "placement": "wall",
+      "sourceIds": [
+        "scroll"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "palace-wall",
+      "label": "宫墙段",
+      "category": "门墙",
+      "periods": [
+        "明清"
+      ],
+      "tags": [
+        "红墙",
+        "黄瓦",
+        "宫墙"
+      ],
+      "description": "朱红墙身与黄色瓦顶。",
+      "defaultSize": {
+        "w": 40,
+        "d": 3,
+        "h": 8
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      },
+      "placement": "wall",
+      "sourceIds": [
+        "buildings"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "wumen-gate",
+      "label": "午门五凤楼",
+      "category": "宫殿",
+      "periods": [
+        "明清"
+      ],
+      "tags": [
+        "午门",
+        "凹形",
+        "五凤楼",
+        "翼楼"
+      ],
+      "description": "凹字台基、中央重檐楼、两翼和四座方亭的组合。",
+      "defaultSize": {
+        "w": 130,
+        "d": 62,
+        "h": 38
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      },
+      "placement": "gate",
+      "sourceIds": [
+        "wumen"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "corner-tower",
+      "label": "紫禁城角楼",
+      "category": "宫殿",
+      "periods": [
+        "明清"
+      ],
+      "tags": [
+        "角楼",
+        "复合屋顶",
+        "重檐"
+      ],
+      "description": "城墙四角角楼，复杂屋顶用参数构件近似。",
+      "defaultSize": {
+        "w": 22,
+        "d": 22,
+        "h": 27
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      },
+      "placement": "wall",
+      "sourceIds": [
+        "buildings"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "double-eave-hall",
+      "label": "重檐庑殿",
+      "category": "宫殿",
+      "periods": [
+        "明清"
+      ],
+      "tags": [
+        "太和殿",
+        "庑殿",
+        "重檐",
+        "金瓦"
+      ],
+      "description": "两层檐、四坡正脊，开间可调整。",
+      "defaultSize": {
+        "w": 60,
+        "d": 32,
+        "h": 25
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      },
+      "placement": "land",
+      "sourceIds": [
+        "taihe"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "xieshan-hall",
+      "label": "歇山殿堂",
+      "category": "宫殿",
+      "periods": [
+        "明清"
+      ],
+      "tags": [
+        "歇山",
+        "宫殿",
+        "保和殿"
+      ],
+      "description": "带山花的歇山屋面。",
+      "defaultSize": {
+        "w": 42,
+        "d": 22,
+        "h": 18
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      },
+      "placement": "land",
+      "sourceIds": [
+        "buildings"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "zanjian-pavilion",
+      "label": "四角攒尖殿亭",
+      "category": "宫殿",
+      "periods": [
+        "明清"
+      ],
+      "tags": [
+        "中和殿",
+        "攒尖",
+        "方形",
+        "亭"
+      ],
+      "description": "方形单檐四角攒尖；中和殿使用此形制。",
+      "defaultSize": {
+        "w": 20,
+        "d": 20,
+        "h": 17
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      },
+      "placement": "land",
+      "sourceIds": [
+        "zhonghe"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "white-stone-terrace",
+      "label": "汉白玉台基",
+      "category": "附属",
+      "periods": [
+        "明清"
+      ],
+      "tags": [
+        "台基",
+        "三台",
+        "台阶"
+      ],
+      "description": "可组合成多层须弥台基与阶梯。",
+      "defaultSize": {
+        "w": 72,
+        "d": 40,
+        "h": 5
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      },
+      "placement": "land",
+      "sourceIds": [
+        "taihe"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "stone-balustrade",
+      "label": "白石栏杆",
+      "category": "附属",
+      "periods": [
+        "明清"
+      ],
+      "tags": [
+        "栏杆",
+        "望柱",
+        "汉白玉"
+      ],
+      "description": "望柱、扶手与栏板。",
+      "defaultSize": {
+        "w": 24,
+        "d": 1,
+        "h": 1.4
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      },
+      "placement": "land",
+      "sourceIds": [
+        "jinshui"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "courtyard-house",
+      "label": "院落侧厢",
+      "category": "宫殿",
+      "periods": [
+        "明清"
+      ],
+      "tags": [
+        "六宫",
+        "院落",
+        "厢房"
+      ],
+      "description": "较小单檐殿宇，用于两侧厢房，院落布局由地图数据控制。",
+      "defaultSize": {
+        "w": 24,
+        "d": 12,
+        "h": 9
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      },
+      "placement": "land",
+      "sourceIds": [
+        "buildings"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "bronze-incense",
+      "label": "铜香炉",
+      "category": "附属",
+      "periods": [
+        "明清"
+      ],
+      "tags": [
+        "铜炉",
+        "香炉",
+        "院落"
+      ],
+      "description": "三足器身与盖，庭院陈设。",
+      "defaultSize": {
+        "w": 3,
+        "d": 3,
+        "h": 3.8
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      },
+      "placement": "land",
+      "sourceIds": [
+        "buildings"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "stone-lion",
+      "label": "石狮",
+      "category": "附属",
+      "periods": [
+        "明清"
+      ],
+      "tags": [
+        "石狮",
+        "宫门"
+      ],
+      "description": "底座与蹲狮概形，雕刻细部推定。",
+      "defaultSize": {
+        "w": 2.4,
+        "d": 3,
+        "h": 3.4
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      },
+      "placement": "land",
+      "sourceIds": [
+        "buildings"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "garden-rock",
+      "label": "园林叠石",
+      "category": "园林",
+      "periods": [
+        "明清"
+      ],
+      "tags": [
+        "假山",
+        "叠石",
+        "御花园"
+      ],
+      "description": "园林叠石组，轮廓参数化。",
+      "defaultSize": {
+        "w": 7,
+        "d": 5,
+        "h": 6
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      },
+      "placement": "land",
+      "sourceIds": [
+        "buildings"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    },
+    {
+      "id": "field-plot",
+      "label": "田畦",
+      "category": "园林",
+      "periods": [
+        "北宋（画卷场景）"
+      ],
+      "tags": [
+        "田地",
+        "郊野",
+        "农田"
+      ],
+      "description": "宋画右侧郊野的田畦意象。",
+      "defaultSize": {
+        "w": 24,
+        "d": 13,
+        "h": 0.4
+      },
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      },
+      "placement": "land",
+      "sourceIds": [
+        "scroll"
+      ],
+      "evidence": "inferred",
+      "version": "1.0.0"
+    }
+  ],
+  "sources": [
+    {
+      "id": "scroll",
+      "title": "故宫博物院｜张择端清明上河图卷（宋本）",
+      "url": "https://www.dpm.org.cn/collection/paint/228226.html",
+      "notes": "采用张择端本的右郊野、中河桥、左城门街市顺序；绘画不是测绘图，距离及隐藏面不能唯一反推。"
+    },
+    {
+      "id": "palace-layout",
+      "title": "故宫博物院｜紫禁城总布局",
+      "url": "https://www.dpm.org.cn/Explore.html",
+      "notes": "城框南北961米、东西753米、墙高10米、护城河宽52米；单体坐标依导览图推定。"
+    },
+    {
+      "id": "buildings",
+      "title": "故宫博物院｜建筑群",
+      "url": "https://www.dpm.org.cn/explore/buildings.html",
+      "notes": "中轴外朝三殿、内廷三宫、东西六宫和御花园的空间关系。"
+    },
+    {
+      "id": "official-map",
+      "title": "故宫博物院｜官方导览平面图",
+      "url": "https://img.dpm.org.cn/static/themes/image/xf/map3.jpg",
+      "notes": "用城框归一化估计单体位置，图像存在投影形变，不称测量坐标。"
+    },
+    {
+      "id": "wumen",
+      "title": "故宫博物院｜午门",
+      "url": "https://www.dpm.org.cn/explore/building/236454.html",
+      "notes": "凹字平面与五凤楼；正楼面阔60.05米、进深25米。总体组合尺寸为推定。"
+    },
+    {
+      "id": "zhonghe",
+      "title": "故宫博物院｜中和殿",
+      "url": "https://www.dpm.org.cn/explore/building/236464.html",
+      "notes": "方形三间，单檐四角攒尖顶，不能使用长方形重檐模型。"
+    },
+    {
+      "id": "taihe",
+      "title": "故宫博物院｜太和殿",
+      "url": "https://www.dpm.org.cn/explore/building/236465.html",
+      "notes": "面阔十一间、重檐庑殿顶及三层台基。"
+    },
+    {
+      "id": "jinshui",
+      "title": "故宫博物院｜内金水桥",
+      "url": "https://www.dpm.org.cn/architectural_art/246281.html",
+      "notes": "五座并列的白石单孔拱桥；建模坐标和桥体细部推定。"
+    }
+  ]
+}

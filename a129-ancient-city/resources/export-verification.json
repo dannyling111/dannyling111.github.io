@@ -1,0 +1,485 @@
+{
+  "models": [
+    {
+      "id": "song-house",
+      "meshCount": 84,
+      "vertices": 3084,
+      "declaredSize": {
+        "w": 12,
+        "d": 9,
+        "h": 8
+      },
+      "actualSize": {
+        "w": 12,
+        "d": 9.000000000000002,
+        "h": 7.999999999999999
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "song-shop",
+      "meshCount": 98,
+      "vertices": 4020,
+      "declaredSize": {
+        "w": 12,
+        "d": 8,
+        "h": 8
+      },
+      "actualSize": {
+        "w": 12,
+        "d": 7.731414654719863,
+        "h": 7.999999999999999
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "song-winehouse",
+      "meshCount": 203,
+      "vertices": 9468,
+      "declaredSize": {
+        "w": 19,
+        "d": 15,
+        "h": 15
+      },
+      "actualSize": {
+        "w": 19,
+        "d": 14.504126183786802,
+        "h": 14.999999999999998
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "song-teahouse",
+      "meshCount": 102,
+      "vertices": 4228,
+      "declaredSize": {
+        "w": 17,
+        "d": 12,
+        "h": 10
+      },
+      "actualSize": {
+        "w": 17,
+        "d": 11.60099011580407,
+        "h": 10
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "market-stall",
+      "meshCount": 86,
+      "vertices": 4240,
+      "declaredSize": {
+        "w": 4,
+        "d": 3,
+        "h": 3.2
+      },
+      "actualSize": {
+        "w": 4.000000000000001,
+        "d": 3,
+        "h": 3.2
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "hongqiao-bridge",
+      "meshCount": 160,
+      "vertices": 3840,
+      "declaredSize": {
+        "w": 64,
+        "d": 16,
+        "h": 13
+      },
+      "actualSize": {
+        "w": 63.94541091689377,
+        "d": 16,
+        "h": 10.344614455604022
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "stone-arch-bridge",
+      "meshCount": 127,
+      "vertices": 11244,
+      "declaredSize": {
+        "w": 26,
+        "d": 7,
+        "h": 5
+      },
+      "actualSize": {
+        "w": 25.869767561118756,
+        "d": 7,
+        "h": 3.9350000029802326
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "canal-boat",
+      "meshCount": 80,
+      "vertices": 2956,
+      "declaredSize": {
+        "w": 4.5,
+        "d": 14,
+        "h": 5
+      },
+      "actualSize": {
+        "w": 3.821380677309408,
+        "d": 14,
+        "h": 3.4799999880790713
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "cargo-boat",
+      "meshCount": 90,
+      "vertices": 3176,
+      "declaredSize": {
+        "w": 8,
+        "d": 27,
+        "h": 10
+      },
+      "actualSize": {
+        "w": 8,
+        "d": 27,
+        "h": 10.249999988079072
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "horse-cart",
+      "meshCount": 32,
+      "vertices": 2022,
+      "declaredSize": {
+        "w": 3,
+        "d": 6,
+        "h": 3.4
+      },
+      "actualSize": {
+        "w": 3,
+        "d": 5.5673076923076925,
+        "h": 3.228000010490417
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "person",
+      "meshCount": 9,
+      "vertices": 687,
+      "declaredSize": {
+        "w": 0.7,
+        "d": 0.7,
+        "h": 1.7
+      },
+      "actualSize": {
+        "w": 0.5754690266278739,
+        "d": 0.315,
+        "h": 1.6577114427860695
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "willow",
+      "meshCount": 39,
+      "vertices": 5600,
+      "declaredSize": {
+        "w": 8,
+        "d": 8,
+        "h": 11
+      },
+      "actualSize": {
+        "w": 7.815500569270603,
+        "d": 7.503731956295989,
+        "h": 10.285
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "pine",
+      "meshCount": 5,
+      "vertices": 192,
+      "declaredSize": {
+        "w": 7,
+        "d": 7,
+        "h": 12
+      },
+      "actualSize": {
+        "w": 6.44,
+        "d": 6.44,
+        "h": 12
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "scholar-tree",
+      "meshCount": 11,
+      "vertices": 1512,
+      "declaredSize": {
+        "w": 9,
+        "d": 9,
+        "h": 12
+      },
+      "actualSize": {
+        "w": 8.792438140429429,
+        "d": 8.441698450832988,
+        "h": 11.219999999999999
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "city-gate",
+      "meshCount": 222,
+      "vertices": 8092,
+      "declaredSize": {
+        "w": 28,
+        "d": 18,
+        "h": 25
+      },
+      "actualSize": {
+        "w": 28,
+        "d": 17.624478380094043,
+        "h": 25
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "city-wall",
+      "meshCount": 16,
+      "vertices": 384,
+      "declaredSize": {
+        "w": 40,
+        "d": 7,
+        "h": 14
+      },
+      "actualSize": {
+        "w": 40,
+        "d": 7,
+        "h": 14
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "palace-wall",
+      "meshCount": 77,
+      "vertices": 2832,
+      "declaredSize": {
+        "w": 40,
+        "d": 3,
+        "h": 8
+      },
+      "actualSize": {
+        "w": 40,
+        "d": 3,
+        "h": 7.999999999999999
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "wumen-gate",
+      "meshCount": 1116,
+      "vertices": 42272,
+      "declaredSize": {
+        "w": 130,
+        "d": 62,
+        "h": 38
+      },
+      "actualSize": {
+        "w": 130,
+        "d": 59.788737974545924,
+        "h": 38
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "corner-tower",
+      "meshCount": 489,
+      "vertices": 17694,
+      "declaredSize": {
+        "w": 22,
+        "d": 22,
+        "h": 27
+      },
+      "actualSize": {
+        "w": 22,
+        "d": 22,
+        "h": 27
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "double-eave-hall",
+      "meshCount": 205,
+      "vertices": 7320,
+      "declaredSize": {
+        "w": 60,
+        "d": 32,
+        "h": 25
+      },
+      "actualSize": {
+        "w": 60,
+        "d": 31.317643561015046,
+        "h": 25
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "xieshan-hall",
+      "meshCount": 206,
+      "vertices": 7254,
+      "declaredSize": {
+        "w": 42,
+        "d": 22,
+        "h": 18
+      },
+      "actualSize": {
+        "w": 42,
+        "d": 21.544254655239442,
+        "h": 17.19
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "zanjian-pavilion",
+      "meshCount": 129,
+      "vertices": 4680,
+      "declaredSize": {
+        "w": 20,
+        "d": 20,
+        "h": 17
+      },
+      "actualSize": {
+        "w": 20,
+        "d": 19.591343313841804,
+        "h": 16.43
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "white-stone-terrace",
+      "meshCount": 193,
+      "vertices": 17160,
+      "declaredSize": {
+        "w": 72,
+        "d": 40,
+        "h": 5
+      },
+      "actualSize": {
+        "w": 72,
+        "d": 40,
+        "h": 5
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "stone-balustrade",
+      "meshCount": 37,
+      "vertices": 3480,
+      "declaredSize": {
+        "w": 24,
+        "d": 1,
+        "h": 1.4
+      },
+      "actualSize": {
+        "w": 24,
+        "d": 1,
+        "h": 1.3827868852459015
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "courtyard-house",
+      "meshCount": 128,
+      "vertices": 4392,
+      "declaredSize": {
+        "w": 24,
+        "d": 12,
+        "h": 9
+      },
+      "actualSize": {
+        "w": 24,
+        "d": 11.738510662049736,
+        "h": 8.820000000000002
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "bronze-incense",
+      "meshCount": 8,
+      "vertices": 803,
+      "declaredSize": {
+        "w": 3,
+        "d": 3,
+        "h": 3.8
+      },
+      "actualSize": {
+        "w": 2.79,
+        "d": 2.79,
+        "h": 3.8179690704066163
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "stone-lion",
+      "meshCount": 10,
+      "vertices": 1752,
+      "declaredSize": {
+        "w": 2.4,
+        "d": 3,
+        "h": 3.4
+      },
+      "actualSize": {
+        "w": 2.4,
+        "d": 3,
+        "h": 3.4
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "garden-rock",
+      "meshCount": 7,
+      "vertices": 1680,
+      "declaredSize": {
+        "w": 7,
+        "d": 5,
+        "h": 6
+      },
+      "actualSize": {
+        "w": 6.166077253859076,
+        "d": 4.0491108176458575,
+        "h": 4.68
+      },
+      "jsonRoundTrip": "PASS"
+    },
+    {
+      "id": "field-plot",
+      "meshCount": 13,
+      "vertices": 312,
+      "declaredSize": {
+        "w": 24,
+        "d": 13,
+        "h": 0.4
+      },
+      "actualSize": {
+        "w": 24,
+        "d": 13,
+        "h": 0.4000000000000001
+      },
+      "jsonRoundTrip": "PASS"
+    }
+  ],
+  "maps": [
+    {
+      "id": "qingming-scroll",
+      "instances": 599,
+      "validation": "PASS",
+      "measured": false
+    },
+    {
+      "id": "forbidden-city",
+      "instances": 293,
+      "validation": "PASS",
+      "measured": false
+    }
+  ],
+  "browser": "NOT_RUN",
+  "gpu": "NOT_RUN",
+  "github": "NOT_PUBLISHED"
+}

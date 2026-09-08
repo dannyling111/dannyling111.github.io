@@ -1,0 +1,7106 @@
+{
+  "schema": "a129-heritage/v1",
+  "id": "forbidden-city",
+  "name": "故宫 · 紫禁城",
+  "version": 1,
+  "bounds": {
+    "width": 920,
+    "depth": 1120
+  },
+  "coordinateSystem": "x-east/z-south/metres",
+  "sources": [
+    "palace-layout",
+    "buildings",
+    "official-map",
+    "wumen",
+    "zhonghe",
+    "taihe",
+    "jinshui"
+  ],
+  "reconstruction": {
+    "basis": "依据故宫博物院馆藏说明、建筑介绍与官方导览图复原",
+    "limitations": [
+      "坐标、单体尺寸（除明确引用者外）、街市密度和隐藏立面均为推定。",
+      "绘画散点透视与导览图不能替代完整测绘，未宣称100%还原。",
+      "细部纹样、完整斗拱与画中每个人物尚未逐项考据。"
+    ],
+    "measured": false
+  },
+  "instances": [
+    {
+      "id": "city-gate-1",
+      "assetId": "city-gate",
+      "name": "东华门",
+      "x": 376,
+      "z": 376,
+      "w": 24,
+      "d": 20,
+      "h": 23,
+      "rotation": 1.5707963267948966,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings",
+        "official-map"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c49a42",
+        "wallColor": "#9a4938"
+      }
+    },
+    {
+      "id": "city-gate-2",
+      "assetId": "city-gate",
+      "name": "西华门",
+      "x": -376,
+      "z": 376,
+      "w": 24,
+      "d": 20,
+      "h": 23,
+      "rotation": 1.5707963267948966,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings",
+        "official-map"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c49a42",
+        "wallColor": "#9a4938"
+      }
+    },
+    {
+      "id": "corner-tower-3",
+      "assetId": "corner-tower",
+      "name": "西北角楼",
+      "x": -370,
+      "z": -474,
+      "w": 22,
+      "d": 22,
+      "h": 27,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "corner-tower-4",
+      "assetId": "corner-tower",
+      "name": "西南角楼",
+      "x": -370,
+      "z": 474,
+      "w": 22,
+      "d": 22,
+      "h": 27,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "corner-tower-5",
+      "assetId": "corner-tower",
+      "name": "东北角楼",
+      "x": 370,
+      "z": -474,
+      "w": 22,
+      "d": 22,
+      "h": 27,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "corner-tower-6",
+      "assetId": "corner-tower",
+      "name": "东南角楼",
+      "x": 370,
+      "z": 474,
+      "w": 22,
+      "d": 22,
+      "h": 27,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "wumen",
+      "assetId": "wumen-gate",
+      "name": "午门",
+      "x": 0,
+      "z": 466,
+      "w": 130,
+      "d": 62,
+      "h": 38,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "wumen"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "taihe-gate",
+      "assetId": "city-gate",
+      "name": "太和门",
+      "x": 0,
+      "z": 337,
+      "w": 60,
+      "d": 25,
+      "h": 24,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings",
+        "official-map"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c49a42",
+        "wallColor": "#9a4938"
+      }
+    },
+    {
+      "id": "taihe-hall",
+      "assetId": "double-eave-hall",
+      "name": "太和殿",
+      "x": 0,
+      "z": 151,
+      "w": 64,
+      "d": 36,
+      "h": 27,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "taihe"
+      ],
+      "parameters": {
+        "bays": 11,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "white-stone-terrace-7",
+      "assetId": "white-stone-terrace",
+      "name": "太和殿台基",
+      "x": 0,
+      "z": 151,
+      "w": 73,
+      "d": 45,
+      "h": 6,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "taihe"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "zhonghe-hall",
+      "assetId": "zanjian-pavilion",
+      "name": "中和殿",
+      "x": 0,
+      "z": 88,
+      "w": 25,
+      "d": 25,
+      "h": 19,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "zhonghe"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "white-stone-terrace-8",
+      "assetId": "white-stone-terrace",
+      "name": "中和殿台基",
+      "x": 0,
+      "z": 88,
+      "w": 34,
+      "d": 34,
+      "h": 2,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "taihe"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "baohe-hall",
+      "assetId": "xieshan-hall",
+      "name": "保和殿",
+      "x": 0,
+      "z": 34,
+      "w": 49,
+      "d": 26,
+      "h": 23,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "white-stone-terrace-9",
+      "assetId": "white-stone-terrace",
+      "name": "保和殿台基",
+      "x": 0,
+      "z": 34,
+      "w": 58,
+      "d": 35,
+      "h": 2,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "taihe"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "qianqing-gate",
+      "assetId": "city-gate",
+      "name": "乾清门",
+      "x": 0,
+      "z": -62,
+      "w": 42,
+      "d": 20,
+      "h": 17,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings",
+        "official-map"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c49a42",
+        "wallColor": "#9a4938"
+      }
+    },
+    {
+      "id": "qianqing-palace",
+      "assetId": "double-eave-hall",
+      "name": "乾清宫",
+      "x": 0,
+      "z": -189,
+      "w": 47,
+      "d": 25,
+      "h": 22,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "taihe"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "white-stone-terrace-10",
+      "assetId": "white-stone-terrace",
+      "name": "乾清宫台基",
+      "x": 0,
+      "z": -189,
+      "w": 56,
+      "d": 34,
+      "h": 2,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "taihe"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "jiaotai-hall",
+      "assetId": "zanjian-pavilion",
+      "name": "交泰殿",
+      "x": 0,
+      "z": -236,
+      "w": 19,
+      "d": 19,
+      "h": 16,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "zhonghe"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "white-stone-terrace-11",
+      "assetId": "white-stone-terrace",
+      "name": "交泰殿台基",
+      "x": 0,
+      "z": -236,
+      "w": 28,
+      "d": 28,
+      "h": 2,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "taihe"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "kunning-palace",
+      "assetId": "xieshan-hall",
+      "name": "坤宁宫",
+      "x": 0,
+      "z": -285,
+      "w": 43,
+      "d": 24,
+      "h": 18,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "white-stone-terrace-12",
+      "assetId": "white-stone-terrace",
+      "name": "坤宁宫台基",
+      "x": 0,
+      "z": -285,
+      "w": 52,
+      "d": 33,
+      "h": 2,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "taihe"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "imperial-garden",
+      "assetId": "zanjian-pavilion",
+      "name": "御花园",
+      "x": 0,
+      "z": -369,
+      "w": 23,
+      "d": 23,
+      "h": 17,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "zhonghe"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "white-stone-terrace-13",
+      "assetId": "white-stone-terrace",
+      "name": "御花园台基",
+      "x": 0,
+      "z": -369,
+      "w": 32,
+      "d": 32,
+      "h": 2,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "taihe"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "shenwu-gate",
+      "assetId": "city-gate",
+      "name": "神武门",
+      "x": 0,
+      "z": -468,
+      "w": 44,
+      "d": 22,
+      "h": 25,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings",
+        "official-map"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c49a42",
+        "wallColor": "#9a4938"
+      }
+    },
+    {
+      "id": "stone-arch-bridge-14",
+      "assetId": "stone-arch-bridge",
+      "name": "内金水桥1",
+      "x": -36,
+      "z": 418,
+      "w": 30,
+      "d": 8,
+      "h": 5,
+      "rotation": 1.5707963267948966,
+      "evidence": "inferred",
+      "sourceIds": [
+        "jinshui"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "stone-arch-bridge-15",
+      "assetId": "stone-arch-bridge",
+      "name": "内金水桥2",
+      "x": -18,
+      "z": 418,
+      "w": 30,
+      "d": 8,
+      "h": 5,
+      "rotation": 1.5707963267948966,
+      "evidence": "inferred",
+      "sourceIds": [
+        "jinshui"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "stone-arch-bridge-16",
+      "assetId": "stone-arch-bridge",
+      "name": "内金水桥3",
+      "x": 0,
+      "z": 418,
+      "w": 30,
+      "d": 8,
+      "h": 5,
+      "rotation": 1.5707963267948966,
+      "evidence": "inferred",
+      "sourceIds": [
+        "jinshui"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "stone-arch-bridge-17",
+      "assetId": "stone-arch-bridge",
+      "name": "内金水桥4",
+      "x": 18,
+      "z": 418,
+      "w": 30,
+      "d": 8,
+      "h": 5,
+      "rotation": 1.5707963267948966,
+      "evidence": "inferred",
+      "sourceIds": [
+        "jinshui"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "stone-arch-bridge-18",
+      "assetId": "stone-arch-bridge",
+      "name": "内金水桥5",
+      "x": 36,
+      "z": 418,
+      "w": 30,
+      "d": 8,
+      "h": 5,
+      "rotation": 1.5707963267948966,
+      "evidence": "inferred",
+      "sourceIds": [
+        "jinshui"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "xieshan-hall-19",
+      "assetId": "xieshan-hall",
+      "name": "文华殿",
+      "x": 215,
+      "z": 305,
+      "w": 43,
+      "d": 25,
+      "h": 18,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-20",
+      "assetId": "courtyard-house",
+      "name": "文华殿配殿",
+      "x": 215,
+      "z": 271,
+      "w": 35.26,
+      "d": 11,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-21",
+      "assetId": "courtyard-house",
+      "name": "文华殿配殿",
+      "x": 215,
+      "z": 339,
+      "w": 35.26,
+      "d": 11,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "xieshan-hall-22",
+      "assetId": "xieshan-hall",
+      "name": "武英殿",
+      "x": -233,
+      "z": 305,
+      "w": 43,
+      "d": 25,
+      "h": 18,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-23",
+      "assetId": "courtyard-house",
+      "name": "武英殿配殿",
+      "x": -233,
+      "z": 271,
+      "w": 35.26,
+      "d": 11,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-24",
+      "assetId": "courtyard-house",
+      "name": "武英殿配殿",
+      "x": -233,
+      "z": 339,
+      "w": 35.26,
+      "d": 11,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "xieshan-hall-25",
+      "assetId": "xieshan-hall",
+      "name": "南三所",
+      "x": 277,
+      "z": 170,
+      "w": 38,
+      "d": 22,
+      "h": 18,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-26",
+      "assetId": "courtyard-house",
+      "name": "南三所配殿",
+      "x": 277,
+      "z": 136,
+      "w": 31.159999999999997,
+      "d": 11,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-27",
+      "assetId": "courtyard-house",
+      "name": "南三所配殿",
+      "x": 277,
+      "z": 204,
+      "w": 31.159999999999997,
+      "d": 11,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "xieshan-hall-28",
+      "assetId": "xieshan-hall",
+      "name": "慈宁宫",
+      "x": -250,
+      "z": -77,
+      "w": 48,
+      "d": 23,
+      "h": 18,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-29",
+      "assetId": "courtyard-house",
+      "name": "慈宁宫配殿",
+      "x": -250,
+      "z": -111,
+      "w": 39.36,
+      "d": 11,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-30",
+      "assetId": "courtyard-house",
+      "name": "慈宁宫配殿",
+      "x": -250,
+      "z": -43,
+      "w": 39.36,
+      "d": 11,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "xieshan-hall-31",
+      "assetId": "xieshan-hall",
+      "name": "寿康宫",
+      "x": -327,
+      "z": -104,
+      "w": 32,
+      "d": 19,
+      "h": 18,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-32",
+      "assetId": "courtyard-house",
+      "name": "寿康宫配殿",
+      "x": -327,
+      "z": -138,
+      "w": 26.24,
+      "d": 11,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-33",
+      "assetId": "courtyard-house",
+      "name": "寿康宫配殿",
+      "x": -327,
+      "z": -70,
+      "w": 26.24,
+      "d": 11,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "xieshan-hall-34",
+      "assetId": "xieshan-hall",
+      "name": "皇极殿",
+      "x": 281,
+      "z": -92,
+      "w": 48,
+      "d": 28,
+      "h": 18,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-35",
+      "assetId": "courtyard-house",
+      "name": "皇极殿配殿",
+      "x": 281,
+      "z": -126,
+      "w": 39.36,
+      "d": 11,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-36",
+      "assetId": "courtyard-house",
+      "name": "皇极殿配殿",
+      "x": 281,
+      "z": -58,
+      "w": 39.36,
+      "d": 11,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "xieshan-hall-37",
+      "assetId": "xieshan-hall",
+      "name": "宁寿宫",
+      "x": 281,
+      "z": -208,
+      "w": 43,
+      "d": 23,
+      "h": 18,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-38",
+      "assetId": "courtyard-house",
+      "name": "宁寿宫配殿",
+      "x": 281,
+      "z": -242,
+      "w": 35.26,
+      "d": 11,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-39",
+      "assetId": "courtyard-house",
+      "name": "宁寿宫配殿",
+      "x": 281,
+      "z": -174,
+      "w": 35.26,
+      "d": 11,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "xieshan-hall-40",
+      "assetId": "xieshan-hall",
+      "name": "养性殿",
+      "x": 281,
+      "z": -317,
+      "w": 39,
+      "d": 20,
+      "h": 18,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-41",
+      "assetId": "courtyard-house",
+      "name": "养性殿配殿",
+      "x": 281,
+      "z": -351,
+      "w": 31.979999999999997,
+      "d": 11,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-42",
+      "assetId": "courtyard-house",
+      "name": "养性殿配殿",
+      "x": 281,
+      "z": -283,
+      "w": 31.979999999999997,
+      "d": 11,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "xieshan-hall-43",
+      "assetId": "xieshan-hall",
+      "name": "咸福宫",
+      "x": -164,
+      "z": -320,
+      "w": 35,
+      "d": 17,
+      "h": 12,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-44",
+      "assetId": "courtyard-house",
+      "name": "咸福宫后殿",
+      "x": -164,
+      "z": -339,
+      "w": 29,
+      "d": 10,
+      "h": 9,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-45",
+      "assetId": "courtyard-house",
+      "name": "咸福宫侧廊",
+      "x": -187,
+      "z": -314,
+      "w": 8,
+      "d": 30,
+      "h": 7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-46",
+      "assetId": "courtyard-house",
+      "name": "咸福宫侧廊",
+      "x": -141,
+      "z": -314,
+      "w": 8,
+      "d": 30,
+      "h": 7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "xieshan-hall-47",
+      "assetId": "xieshan-hall",
+      "name": "长春宫",
+      "x": -164,
+      "z": -263,
+      "w": 35,
+      "d": 17,
+      "h": 12,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-48",
+      "assetId": "courtyard-house",
+      "name": "长春宫后殿",
+      "x": -164,
+      "z": -282,
+      "w": 29,
+      "d": 10,
+      "h": 9,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-49",
+      "assetId": "courtyard-house",
+      "name": "长春宫侧廊",
+      "x": -187,
+      "z": -257,
+      "w": 8,
+      "d": 30,
+      "h": 7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-50",
+      "assetId": "courtyard-house",
+      "name": "长春宫侧廊",
+      "x": -141,
+      "z": -257,
+      "w": 8,
+      "d": 30,
+      "h": 7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "xieshan-hall-51",
+      "assetId": "xieshan-hall",
+      "name": "太极殿",
+      "x": -164,
+      "z": -208,
+      "w": 35,
+      "d": 17,
+      "h": 12,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-52",
+      "assetId": "courtyard-house",
+      "name": "太极殿后殿",
+      "x": -164,
+      "z": -227,
+      "w": 29,
+      "d": 10,
+      "h": 9,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-53",
+      "assetId": "courtyard-house",
+      "name": "太极殿侧廊",
+      "x": -187,
+      "z": -202,
+      "w": 8,
+      "d": 30,
+      "h": 7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-54",
+      "assetId": "courtyard-house",
+      "name": "太极殿侧廊",
+      "x": -141,
+      "z": -202,
+      "w": 8,
+      "d": 30,
+      "h": 7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "xieshan-hall-55",
+      "assetId": "xieshan-hall",
+      "name": "储秀宫",
+      "x": -102,
+      "z": -320,
+      "w": 35,
+      "d": 17,
+      "h": 12,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-56",
+      "assetId": "courtyard-house",
+      "name": "储秀宫后殿",
+      "x": -102,
+      "z": -339,
+      "w": 29,
+      "d": 10,
+      "h": 9,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-57",
+      "assetId": "courtyard-house",
+      "name": "储秀宫侧廊",
+      "x": -125,
+      "z": -314,
+      "w": 8,
+      "d": 30,
+      "h": 7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "xieshan-hall-58",
+      "assetId": "xieshan-hall",
+      "name": "翊坤宫",
+      "x": -102,
+      "z": -263,
+      "w": 35,
+      "d": 17,
+      "h": 12,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-59",
+      "assetId": "courtyard-house",
+      "name": "翊坤宫后殿",
+      "x": -102,
+      "z": -282,
+      "w": 29,
+      "d": 10,
+      "h": 9,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-60",
+      "assetId": "courtyard-house",
+      "name": "翊坤宫侧廊",
+      "x": -125,
+      "z": -257,
+      "w": 8,
+      "d": 30,
+      "h": 7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "xieshan-hall-61",
+      "assetId": "xieshan-hall",
+      "name": "永寿宫",
+      "x": -102,
+      "z": -208,
+      "w": 35,
+      "d": 17,
+      "h": 12,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-62",
+      "assetId": "courtyard-house",
+      "name": "永寿宫后殿",
+      "x": -102,
+      "z": -227,
+      "w": 29,
+      "d": 10,
+      "h": 9,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-63",
+      "assetId": "courtyard-house",
+      "name": "永寿宫侧廊",
+      "x": -125,
+      "z": -202,
+      "w": 8,
+      "d": 30,
+      "h": 7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "xieshan-hall-64",
+      "assetId": "xieshan-hall",
+      "name": "景仁宫",
+      "x": 102,
+      "z": -208,
+      "w": 35,
+      "d": 17,
+      "h": 12,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-65",
+      "assetId": "courtyard-house",
+      "name": "景仁宫后殿",
+      "x": 102,
+      "z": -227,
+      "w": 29,
+      "d": 10,
+      "h": 9,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-66",
+      "assetId": "courtyard-house",
+      "name": "景仁宫侧廊",
+      "x": 125,
+      "z": -202,
+      "w": 8,
+      "d": 30,
+      "h": 7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "xieshan-hall-67",
+      "assetId": "xieshan-hall",
+      "name": "承乾宫",
+      "x": 102,
+      "z": -263,
+      "w": 35,
+      "d": 17,
+      "h": 12,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-68",
+      "assetId": "courtyard-house",
+      "name": "承乾宫后殿",
+      "x": 102,
+      "z": -282,
+      "w": 29,
+      "d": 10,
+      "h": 9,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-69",
+      "assetId": "courtyard-house",
+      "name": "承乾宫侧廊",
+      "x": 125,
+      "z": -257,
+      "w": 8,
+      "d": 30,
+      "h": 7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "xieshan-hall-70",
+      "assetId": "xieshan-hall",
+      "name": "钟粹宫",
+      "x": 102,
+      "z": -320,
+      "w": 35,
+      "d": 17,
+      "h": 12,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-71",
+      "assetId": "courtyard-house",
+      "name": "钟粹宫后殿",
+      "x": 102,
+      "z": -339,
+      "w": 29,
+      "d": 10,
+      "h": 9,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-72",
+      "assetId": "courtyard-house",
+      "name": "钟粹宫侧廊",
+      "x": 125,
+      "z": -314,
+      "w": 8,
+      "d": 30,
+      "h": 7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "xieshan-hall-73",
+      "assetId": "xieshan-hall",
+      "name": "延禧宫",
+      "x": 160,
+      "z": -208,
+      "w": 35,
+      "d": 17,
+      "h": 12,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-74",
+      "assetId": "courtyard-house",
+      "name": "延禧宫后殿",
+      "x": 160,
+      "z": -227,
+      "w": 29,
+      "d": 10,
+      "h": 9,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-75",
+      "assetId": "courtyard-house",
+      "name": "延禧宫侧廊",
+      "x": 137,
+      "z": -202,
+      "w": 8,
+      "d": 30,
+      "h": 7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-76",
+      "assetId": "courtyard-house",
+      "name": "延禧宫侧廊",
+      "x": 183,
+      "z": -202,
+      "w": 8,
+      "d": 30,
+      "h": 7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "xieshan-hall-77",
+      "assetId": "xieshan-hall",
+      "name": "永和宫",
+      "x": 160,
+      "z": -263,
+      "w": 35,
+      "d": 17,
+      "h": 12,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-78",
+      "assetId": "courtyard-house",
+      "name": "永和宫后殿",
+      "x": 160,
+      "z": -282,
+      "w": 29,
+      "d": 10,
+      "h": 9,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-79",
+      "assetId": "courtyard-house",
+      "name": "永和宫侧廊",
+      "x": 137,
+      "z": -257,
+      "w": 8,
+      "d": 30,
+      "h": 7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-80",
+      "assetId": "courtyard-house",
+      "name": "永和宫侧廊",
+      "x": 183,
+      "z": -257,
+      "w": 8,
+      "d": 30,
+      "h": 7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "xieshan-hall-81",
+      "assetId": "xieshan-hall",
+      "name": "景阳宫",
+      "x": 160,
+      "z": -320,
+      "w": 35,
+      "d": 17,
+      "h": 12,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-82",
+      "assetId": "courtyard-house",
+      "name": "景阳宫后殿",
+      "x": 160,
+      "z": -339,
+      "w": 29,
+      "d": 10,
+      "h": 9,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-83",
+      "assetId": "courtyard-house",
+      "name": "景阳宫侧廊",
+      "x": 137,
+      "z": -314,
+      "w": 8,
+      "d": 30,
+      "h": 7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-84",
+      "assetId": "courtyard-house",
+      "name": "景阳宫侧廊",
+      "x": 183,
+      "z": -314,
+      "w": 8,
+      "d": 30,
+      "h": 7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "zanjian-pavilion-85",
+      "assetId": "zanjian-pavilion",
+      "name": "御花园亭",
+      "x": -59,
+      "z": -398,
+      "w": 12,
+      "d": 12,
+      "h": 12,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "zhonghe"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "zanjian-pavilion-86",
+      "assetId": "zanjian-pavilion",
+      "name": "御花园亭",
+      "x": -59,
+      "z": -350,
+      "w": 12,
+      "d": 12,
+      "h": 12,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "zhonghe"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "zanjian-pavilion-87",
+      "assetId": "zanjian-pavilion",
+      "name": "御花园亭",
+      "x": 59,
+      "z": -398,
+      "w": 12,
+      "d": 12,
+      "h": 12,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "zhonghe"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "zanjian-pavilion-88",
+      "assetId": "zanjian-pavilion",
+      "name": "御花园亭",
+      "x": 59,
+      "z": -350,
+      "w": 12,
+      "d": 12,
+      "h": 12,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "zhonghe"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-89",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": -52,
+      "z": -414,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-90",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": -52,
+      "z": -388,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-91",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": -52,
+      "z": -375,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "garden-rock-92",
+      "assetId": "garden-rock",
+      "name": "御花园松石",
+      "x": -52,
+      "z": -362,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "garden-rock-93",
+      "assetId": "garden-rock",
+      "name": "御花园松石",
+      "x": -39,
+      "z": -414,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-94",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": -39,
+      "z": -401,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-95",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": -39,
+      "z": -388,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "garden-rock-96",
+      "assetId": "garden-rock",
+      "name": "御花园松石",
+      "x": -39,
+      "z": -375,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-97",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": -39,
+      "z": -362,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-98",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": -39,
+      "z": -349,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-99",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": -26,
+      "z": -414,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-100",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": -26,
+      "z": -401,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "garden-rock-101",
+      "assetId": "garden-rock",
+      "name": "御花园松石",
+      "x": -26,
+      "z": -388,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-102",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": -26,
+      "z": -375,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-103",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": -26,
+      "z": -362,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "garden-rock-104",
+      "assetId": "garden-rock",
+      "name": "御花园松石",
+      "x": -26,
+      "z": -349,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-105",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": -13,
+      "z": -414,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "garden-rock-106",
+      "assetId": "garden-rock",
+      "name": "御花园松石",
+      "x": -13,
+      "z": -401,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "garden-rock-107",
+      "assetId": "garden-rock",
+      "name": "御花园松石",
+      "x": 0,
+      "z": -414,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-108",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": 0,
+      "z": -401,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-109",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": 13,
+      "z": -414,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-110",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": 13,
+      "z": -401,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-111",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": 26,
+      "z": -414,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "garden-rock-112",
+      "assetId": "garden-rock",
+      "name": "御花园松石",
+      "x": 26,
+      "z": -401,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-113",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": 26,
+      "z": -388,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-114",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": 26,
+      "z": -375,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "garden-rock-115",
+      "assetId": "garden-rock",
+      "name": "御花园松石",
+      "x": 26,
+      "z": -362,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-116",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": 26,
+      "z": -349,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "garden-rock-117",
+      "assetId": "garden-rock",
+      "name": "御花园松石",
+      "x": 39,
+      "z": -414,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-118",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": 39,
+      "z": -401,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-119",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": 39,
+      "z": -388,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "garden-rock-120",
+      "assetId": "garden-rock",
+      "name": "御花园松石",
+      "x": 39,
+      "z": -375,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-121",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": 39,
+      "z": -362,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-122",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": 39,
+      "z": -349,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-123",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": 52,
+      "z": -414,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "garden-rock-124",
+      "assetId": "garden-rock",
+      "name": "御花园松石",
+      "x": 52,
+      "z": -388,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-125",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": 52,
+      "z": -375,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-126",
+      "assetId": "pine",
+      "name": "御花园松石",
+      "x": 52,
+      "z": -362,
+      "w": 7,
+      "d": 7,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-127",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": -323,
+      "z": 90,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-128",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": -323,
+      "z": 146,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-129",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": -323,
+      "z": 202,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-130",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": -323,
+      "z": -399,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-131",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": -278,
+      "z": 90,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-132",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": -278,
+      "z": 146,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-133",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": -278,
+      "z": 202,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-134",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": -278,
+      "z": -399,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-135",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": -190,
+      "z": 90,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-136",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": -190,
+      "z": 146,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-137",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": -190,
+      "z": 202,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-138",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": -190,
+      "z": 382,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-139",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": -190,
+      "z": -399,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-140",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": -135,
+      "z": 90,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-141",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": -135,
+      "z": 146,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-142",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": -135,
+      "z": 202,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-143",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": -135,
+      "z": 382,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-144",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": -135,
+      "z": -399,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-145",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": 135,
+      "z": 90,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-146",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": 135,
+      "z": 146,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-147",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": 135,
+      "z": 202,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-148",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": 135,
+      "z": 382,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-149",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": 135,
+      "z": -399,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-150",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": 185,
+      "z": 90,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-151",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": 185,
+      "z": 146,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-152",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": 185,
+      "z": 202,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-153",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": 185,
+      "z": -399,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-154",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": 278,
+      "z": 90,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-155",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": 278,
+      "z": -399,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-156",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": 326,
+      "z": 90,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-157",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": 326,
+      "z": 146,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-158",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": 326,
+      "z": 202,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-159",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": 326,
+      "z": 382,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "courtyard-house-160",
+      "assetId": "courtyard-house",
+      "name": "宫城附属院宇（位置推定）",
+      "x": 326,
+      "z": -399,
+      "w": 29,
+      "d": 15,
+      "h": 10,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-161",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": -344,
+      "z": -425,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-162",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": -344,
+      "z": -386,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-163",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": -344,
+      "z": -347,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-164",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": -344,
+      "z": -308,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-165",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": -344,
+      "z": -269,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-166",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": -344,
+      "z": -230,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-167",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": -344,
+      "z": -191,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-168",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": -344,
+      "z": -152,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-169",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": -344,
+      "z": -35,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-170",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": -344,
+      "z": 4,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-171",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": -344,
+      "z": 43,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-172",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": -344,
+      "z": 82,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-173",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": -344,
+      "z": 121,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-174",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": -344,
+      "z": 160,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-175",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": -344,
+      "z": 199,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-176",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": -344,
+      "z": 238,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-177",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": -344,
+      "z": 277,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-178",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": -344,
+      "z": 316,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-179",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": -344,
+      "z": 355,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-180",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": -344,
+      "z": 394,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-181",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": -344,
+      "z": 433,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-182",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": 344,
+      "z": -425,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-183",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": 344,
+      "z": -386,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-184",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": 344,
+      "z": -347,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-185",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": 344,
+      "z": -308,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-186",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": 344,
+      "z": -269,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-187",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": 344,
+      "z": -230,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-188",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": 344,
+      "z": -191,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-189",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": 344,
+      "z": -152,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-190",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": 344,
+      "z": -113,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-191",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": 344,
+      "z": -74,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-192",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": 344,
+      "z": -35,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-193",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": 344,
+      "z": 4,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-194",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": 344,
+      "z": 43,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-195",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": 344,
+      "z": 121,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-196",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": 344,
+      "z": 160,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-197",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": 344,
+      "z": 238,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-198",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": 344,
+      "z": 277,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-199",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": 344,
+      "z": 316,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-200",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": 344,
+      "z": 355,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-201",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": 344,
+      "z": 394,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "pine-202",
+      "assetId": "pine",
+      "name": "宫城松柏",
+      "x": 344,
+      "z": 433,
+      "w": 8,
+      "d": 8,
+      "h": 13,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "bronze-incense-203",
+      "assetId": "bronze-incense",
+      "name": "庭院铜炉",
+      "x": -41,
+      "z": 216,
+      "w": 3,
+      "d": 3,
+      "h": 4,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "stone-lion-204",
+      "assetId": "stone-lion",
+      "name": "宫门石狮",
+      "x": -20.5,
+      "z": 217,
+      "w": 2.4,
+      "d": 3,
+      "h": 3.4,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "bronze-incense-205",
+      "assetId": "bronze-incense",
+      "name": "庭院铜炉",
+      "x": 41,
+      "z": 216,
+      "w": 3,
+      "d": 3,
+      "h": 4,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "stone-lion-206",
+      "assetId": "stone-lion",
+      "name": "宫门石狮",
+      "x": 20.5,
+      "z": 217,
+      "w": 2.4,
+      "d": 3,
+      "h": 3.4,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "bronze-incense-207",
+      "assetId": "bronze-incense",
+      "name": "庭院铜炉",
+      "x": -41,
+      "z": -6,
+      "w": 3,
+      "d": 3,
+      "h": 4,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "stone-lion-208",
+      "assetId": "stone-lion",
+      "name": "宫门石狮",
+      "x": -20.5,
+      "z": -5,
+      "w": 2.4,
+      "d": 3,
+      "h": 3.4,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "bronze-incense-209",
+      "assetId": "bronze-incense",
+      "name": "庭院铜炉",
+      "x": 41,
+      "z": -6,
+      "w": 3,
+      "d": 3,
+      "h": 4,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "stone-lion-210",
+      "assetId": "stone-lion",
+      "name": "宫门石狮",
+      "x": 20.5,
+      "z": -5,
+      "w": 2.4,
+      "d": 3,
+      "h": 3.4,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "bronze-incense-211",
+      "assetId": "bronze-incense",
+      "name": "庭院铜炉",
+      "x": -41,
+      "z": -88,
+      "w": 3,
+      "d": 3,
+      "h": 4,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "stone-lion-212",
+      "assetId": "stone-lion",
+      "name": "宫门石狮",
+      "x": -20.5,
+      "z": -87,
+      "w": 2.4,
+      "d": 3,
+      "h": 3.4,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "bronze-incense-213",
+      "assetId": "bronze-incense",
+      "name": "庭院铜炉",
+      "x": 41,
+      "z": -88,
+      "w": 3,
+      "d": 3,
+      "h": 4,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "stone-lion-214",
+      "assetId": "stone-lion",
+      "name": "宫门石狮",
+      "x": 20.5,
+      "z": -87,
+      "w": 2.4,
+      "d": 3,
+      "h": 3.4,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "bronze-incense-215",
+      "assetId": "bronze-incense",
+      "name": "庭院铜炉",
+      "x": -41,
+      "z": -323,
+      "w": 3,
+      "d": 3,
+      "h": 4,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "stone-lion-216",
+      "assetId": "stone-lion",
+      "name": "宫门石狮",
+      "x": -20.5,
+      "z": -322,
+      "w": 2.4,
+      "d": 3,
+      "h": 3.4,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "bronze-incense-217",
+      "assetId": "bronze-incense",
+      "name": "庭院铜炉",
+      "x": 41,
+      "z": -323,
+      "w": 3,
+      "d": 3,
+      "h": 4,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "stone-lion-218",
+      "assetId": "stone-lion",
+      "name": "宫门石狮",
+      "x": 20.5,
+      "z": -322,
+      "w": 2.4,
+      "d": 3,
+      "h": 3.4,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "buildings"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#c89b45",
+        "wallColor": "#954c3e"
+      }
+    },
+    {
+      "id": "person-219",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": -431,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-220",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": -394,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-221",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": -357,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-222",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": -320,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-223",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": -283,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-224",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": -246,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-225",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": -209,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-226",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": -172,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-227",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": -135,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-228",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": -98,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-229",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": -61,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-230",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": -24,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-231",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": 13,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-232",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": 50,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-233",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": 87,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-234",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": 124,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-235",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": 161,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-236",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": 198,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-237",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": 235,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-238",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": 272,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-239",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": 309,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-240",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": 346,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-241",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": 383,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-242",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": 420,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-243",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": -399,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-244",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": -362,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-245",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": -325,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-246",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": -288,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-247",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": -251,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-248",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": -214,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-249",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": -177,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-250",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": -140,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-251",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": -103,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-252",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": -66,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-253",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": -29,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-254",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": 8,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-255",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": 45,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-256",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": 82,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-257",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": 119,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-258",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": 156,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-259",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": 193,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-260",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": 230,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-261",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": 267,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-262",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": 304,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-263",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": 341,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-264",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": 378,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-265",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": 415,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-266",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": -404,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-267",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": -367,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-268",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": -330,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-269",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": -293,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-270",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": -256,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-271",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": -219,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-272",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": -182,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-273",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": -145,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-274",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": -108,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-275",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": -71,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-276",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": -34,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-277",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": 3,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-278",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": 40,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-279",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": 77,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-280",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": 114,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-281",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": -74,
+      "z": 151,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    },
+    {
+      "id": "person-282",
+      "assetId": "person",
+      "name": "游人（示意）",
+      "x": 74,
+      "z": 188,
+      "w": 0.7,
+      "d": 0.7,
+      "h": 1.7,
+      "rotation": 0,
+      "evidence": "inferred",
+      "sourceIds": [
+        "scroll"
+      ],
+      "parameters": {
+        "bays": 5,
+        "roofColor": "#68665b",
+        "wallColor": "#b6a58c"
+      }
+    }
+  ],
+  "water": [
+    {
+      "id": "moat-west",
+      "name": "西护城河",
+      "points": [
+        [
+          -431,
+          -534
+        ],
+        [
+          -379,
+          -534
+        ],
+        [
+          -379,
+          534
+        ],
+        [
+          -431,
+          534
+        ]
+      ]
+    },
+    {
+      "id": "moat-east",
+      "name": "东护城河",
+      "points": [
+        [
+          379,
+          -534
+        ],
+        [
+          431,
+          -534
+        ],
+        [
+          431,
+          534
+        ],
+        [
+          379,
+          534
+        ]
+      ]
+    },
+    {
+      "id": "moat-north",
+      "name": "北护城河",
+      "points": [
+        [
+          -379,
+          -534
+        ],
+        [
+          379,
+          -534
+        ],
+        [
+          379,
+          -483
+        ],
+        [
+          -379,
+          -483
+        ]
+      ]
+    },
+    {
+      "id": "moat-south-west",
+      "name": "南护城河西段",
+      "points": [
+        [
+          -379,
+          483
+        ],
+        [
+          -85,
+          483
+        ],
+        [
+          -85,
+          535
+        ],
+        [
+          -379,
+          535
+        ]
+      ]
+    },
+    {
+      "id": "moat-south-east",
+      "name": "南护城河东段",
+      "points": [
+        [
+          85,
+          483
+        ],
+        [
+          379,
+          483
+        ],
+        [
+          379,
+          535
+        ],
+        [
+          85,
+          535
+        ]
+      ]
+    },
+    {
+      "id": "inner-jinshui",
+      "name": "内金水河（推定曲线）",
+      "points": [
+        [
+          -320,
+          361
+        ],
+        [
+          -180,
+          398
+        ],
+        [
+          -100,
+          407
+        ],
+        [
+          110,
+          407
+        ],
+        [
+          198,
+          390
+        ],
+        [
+          330,
+          337
+        ],
+        [
+          335,
+          353
+        ],
+        [
+          200,
+          410
+        ],
+        [
+          114,
+          429
+        ],
+        [
+          -106,
+          429
+        ],
+        [
+          -190,
+          416
+        ],
+        [
+          -325,
+          377
+        ]
+      ]
+    }
+  ],
+  "roads": [
+    {
+      "id": "side-walk--1",
+      "name": "side-walk--1",
+      "points": [
+        [
+          -74,
+          394
+        ],
+        [
+          -74,
+          -445
+        ]
+      ],
+      "width": 8
+    },
+    {
+      "id": "side-walk-1",
+      "name": "side-walk-1",
+      "points": [
+        [
+          74,
+          394
+        ],
+        [
+          74,
+          -445
+        ]
+      ],
+      "width": 8
+    },
+    {
+      "id": "午门前庭通行",
+      "name": "午门前庭通行",
+      "points": [
+        [
+          0,
+          505
+        ],
+        [
+          0,
+          448
+        ]
+      ],
+      "width": 10
+    },
+    {
+      "id": "金水桥通行-2",
+      "name": "金水桥通行-2",
+      "points": [
+        [
+          -36,
+          448
+        ],
+        [
+          -36,
+          376
+        ]
+      ],
+      "width": 5
+    },
+    {
+      "id": "金水桥通行-1",
+      "name": "金水桥通行-1",
+      "points": [
+        [
+          -18,
+          448
+        ],
+        [
+          -18,
+          376
+        ]
+      ],
+      "width": 5
+    },
+    {
+      "id": "金水桥通行0",
+      "name": "金水桥通行0",
+      "points": [
+        [
+          0,
+          448
+        ],
+        [
+          0,
+          376
+        ]
+      ],
+      "width": 5
+    },
+    {
+      "id": "金水桥通行1",
+      "name": "金水桥通行1",
+      "points": [
+        [
+          18,
+          448
+        ],
+        [
+          18,
+          376
+        ]
+      ],
+      "width": 5
+    },
+    {
+      "id": "金水桥通行2",
+      "name": "金水桥通行2",
+      "points": [
+        [
+          36,
+          448
+        ],
+        [
+          36,
+          376
+        ]
+      ],
+      "width": 5
+    },
+    {
+      "id": "庭院横路448",
+      "name": "庭院横路448",
+      "points": [
+        [
+          -74,
+          448
+        ],
+        [
+          74,
+          448
+        ]
+      ],
+      "width": 8
+    },
+    {
+      "id": "庭院横路376",
+      "name": "庭院横路376",
+      "points": [
+        [
+          -74,
+          376
+        ],
+        [
+          74,
+          376
+        ]
+      ],
+      "width": 8
+    },
+    {
+      "id": "庭院横路298",
+      "name": "庭院横路298",
+      "points": [
+        [
+          -74,
+          298
+        ],
+        [
+          74,
+          298
+        ]
+      ],
+      "width": 8
+    },
+    {
+      "id": "庭院横路204",
+      "name": "庭院横路204",
+      "points": [
+        [
+          -74,
+          204
+        ],
+        [
+          74,
+          204
+        ]
+      ],
+      "width": 8
+    },
+    {
+      "id": "庭院横路-18",
+      "name": "庭院横路-18",
+      "points": [
+        [
+          -74,
+          -18
+        ],
+        [
+          74,
+          -18
+        ]
+      ],
+      "width": 8
+    },
+    {
+      "id": "庭院横路-100",
+      "name": "庭院横路-100",
+      "points": [
+        [
+          -74,
+          -100
+        ],
+        [
+          74,
+          -100
+        ]
+      ],
+      "width": 8
+    },
+    {
+      "id": "庭院横路-335",
+      "name": "庭院横路-335",
+      "points": [
+        [
+          -74,
+          -335
+        ],
+        [
+          74,
+          -335
+        ]
+      ],
+      "width": 8
+    },
+    {
+      "id": "庭院横路-424",
+      "name": "庭院横路-424",
+      "points": [
+        [
+          -74,
+          -424
+        ],
+        [
+          74,
+          -424
+        ]
+      ],
+      "width": 8
+    }
+  ],
+  "walls": [
+    {
+      "id": "outer--1-a",
+      "x1": -376.5,
+      "z1": -480.5,
+      "x2": -376.5,
+      "z2": 358,
+      "height": 10,
+      "thickness": 7
+    },
+    {
+      "id": "outer--1-b",
+      "x1": -376.5,
+      "z1": 394,
+      "x2": -376.5,
+      "z2": 480.5,
+      "height": 10,
+      "thickness": 7
+    },
+    {
+      "id": "outer-n--1",
+      "x1": -18,
+      "z1": -480.5,
+      "x2": -376.5,
+      "z2": -480.5,
+      "height": 10,
+      "thickness": 7
+    },
+    {
+      "id": "outer-s--1",
+      "x1": -69,
+      "z1": 480.5,
+      "x2": -376.5,
+      "z2": 480.5,
+      "height": 10,
+      "thickness": 7
+    },
+    {
+      "id": "outer-1-a",
+      "x1": 376.5,
+      "z1": -480.5,
+      "x2": 376.5,
+      "z2": 358,
+      "height": 10,
+      "thickness": 7
+    },
+    {
+      "id": "outer-1-b",
+      "x1": 376.5,
+      "z1": 394,
+      "x2": 376.5,
+      "z2": 480.5,
+      "height": 10,
+      "thickness": 7
+    },
+    {
+      "id": "outer-n-1",
+      "x1": 18,
+      "z1": -480.5,
+      "x2": 376.5,
+      "z2": -480.5,
+      "height": 10,
+      "thickness": 7
+    },
+    {
+      "id": "outer-s-1",
+      "x1": 69,
+      "z1": 480.5,
+      "x2": 376.5,
+      "z2": 480.5,
+      "height": 10,
+      "thickness": 7
+    },
+    {
+      "id": "wenhua-end-34",
+      "x1": 184.9,
+      "z1": 262.5,
+      "x2": 245.1,
+      "z2": 262.5,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "wenhua-end34",
+      "x1": 184.9,
+      "z1": 347.5,
+      "x2": 245.1,
+      "z2": 347.5,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "wenhua-side-1",
+      "x1": 179.74,
+      "z1": 262,
+      "x2": 179.74,
+      "z2": 348,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "wenhua-side1",
+      "x1": 250.26,
+      "z1": 262,
+      "x2": 250.26,
+      "z2": 348,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "wuying-end-34",
+      "x1": -263.1,
+      "z1": 262.5,
+      "x2": -202.9,
+      "z2": 262.5,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "wuying-end34",
+      "x1": -263.1,
+      "z1": 347.5,
+      "x2": -202.9,
+      "z2": 347.5,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "wuying-side-1",
+      "x1": -268.26,
+      "z1": 262,
+      "x2": -268.26,
+      "z2": 348,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "wuying-side1",
+      "x1": -197.74,
+      "z1": 262,
+      "x2": -197.74,
+      "z2": 348,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "nansan-end-34",
+      "x1": 250.4,
+      "z1": 127.5,
+      "x2": 303.6,
+      "z2": 127.5,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "nansan-end34",
+      "x1": 250.4,
+      "z1": 212.5,
+      "x2": 303.6,
+      "z2": 212.5,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "nansan-side-1",
+      "x1": 245.84,
+      "z1": 127,
+      "x2": 245.84,
+      "z2": 213,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "nansan-side1",
+      "x1": 308.15999999999997,
+      "z1": 127,
+      "x2": 308.15999999999997,
+      "z2": 213,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "cining-end-34",
+      "x1": -283.6,
+      "z1": -119.5,
+      "x2": -216.4,
+      "z2": -119.5,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "cining-end34",
+      "x1": -283.6,
+      "z1": -34.5,
+      "x2": -216.4,
+      "z2": -34.5,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "cining-side-1",
+      "x1": -289.36,
+      "z1": -120,
+      "x2": -289.36,
+      "z2": -34,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "cining-side1",
+      "x1": -210.64,
+      "z1": -120,
+      "x2": -210.64,
+      "z2": -34,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "shoukang-end-34",
+      "x1": -349.4,
+      "z1": -146.5,
+      "x2": -304.6,
+      "z2": -146.5,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "shoukang-end34",
+      "x1": -349.4,
+      "z1": -61.5,
+      "x2": -304.6,
+      "z2": -61.5,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "shoukang-side-1",
+      "x1": -353.24,
+      "z1": -147,
+      "x2": -353.24,
+      "z2": -61,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "shoukang-side1",
+      "x1": -300.76,
+      "z1": -147,
+      "x2": -300.76,
+      "z2": -61,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "huangji-end-34",
+      "x1": 247.4,
+      "z1": -134.5,
+      "x2": 314.6,
+      "z2": -134.5,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "huangji-end34",
+      "x1": 247.4,
+      "z1": -49.5,
+      "x2": 314.6,
+      "z2": -49.5,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "huangji-side-1",
+      "x1": 241.64,
+      "z1": -135,
+      "x2": 241.64,
+      "z2": -49,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "huangji-side1",
+      "x1": 320.36,
+      "z1": -135,
+      "x2": 320.36,
+      "z2": -49,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "ningshou-end-34",
+      "x1": 250.9,
+      "z1": -250.5,
+      "x2": 311.1,
+      "z2": -250.5,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "ningshou-end34",
+      "x1": 250.9,
+      "z1": -165.5,
+      "x2": 311.1,
+      "z2": -165.5,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "ningshou-side-1",
+      "x1": 245.74,
+      "z1": -251,
+      "x2": 245.74,
+      "z2": -165,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "ningshou-side1",
+      "x1": 316.26,
+      "z1": -251,
+      "x2": 316.26,
+      "z2": -165,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "yangxing-end-34",
+      "x1": 253.7,
+      "z1": -359.5,
+      "x2": 308.3,
+      "z2": -359.5,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "yangxing-end34",
+      "x1": 253.7,
+      "z1": -274.5,
+      "x2": 308.3,
+      "z2": -274.5,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "yangxing-side-1",
+      "x1": 249.02,
+      "z1": -360,
+      "x2": 249.02,
+      "z2": -274,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "yangxing-side1",
+      "x1": 312.98,
+      "z1": -360,
+      "x2": 312.98,
+      "z2": -274,
+      "height": 4,
+      "thickness": 1.5
+    },
+    {
+      "id": "咸福宫南墙",
+      "x1": -191,
+      "z1": -296,
+      "x2": -137,
+      "z2": -296,
+      "height": 4,
+      "thickness": 1
+    },
+    {
+      "id": "长春宫南墙",
+      "x1": -191,
+      "z1": -239,
+      "x2": -137,
+      "z2": -239,
+      "height": 4,
+      "thickness": 1
+    },
+    {
+      "id": "太极殿南墙",
+      "x1": -191,
+      "z1": -184,
+      "x2": -137,
+      "z2": -184,
+      "height": 4,
+      "thickness": 1
+    },
+    {
+      "id": "储秀宫南墙",
+      "x1": -129,
+      "z1": -296,
+      "x2": -75,
+      "z2": -296,
+      "height": 4,
+      "thickness": 1
+    },
+    {
+      "id": "翊坤宫南墙",
+      "x1": -129,
+      "z1": -239,
+      "x2": -75,
+      "z2": -239,
+      "height": 4,
+      "thickness": 1
+    },
+    {
+      "id": "永寿宫南墙",
+      "x1": -129,
+      "z1": -184,
+      "x2": -75,
+      "z2": -184,
+      "height": 4,
+      "thickness": 1
+    },
+    {
+      "id": "景仁宫南墙",
+      "x1": 75,
+      "z1": -184,
+      "x2": 129,
+      "z2": -184,
+      "height": 4,
+      "thickness": 1
+    },
+    {
+      "id": "承乾宫南墙",
+      "x1": 75,
+      "z1": -239,
+      "x2": 129,
+      "z2": -239,
+      "height": 4,
+      "thickness": 1
+    },
+    {
+      "id": "钟粹宫南墙",
+      "x1": 75,
+      "z1": -296,
+      "x2": 129,
+      "z2": -296,
+      "height": 4,
+      "thickness": 1
+    },
+    {
+      "id": "延禧宫南墙",
+      "x1": 133,
+      "z1": -184,
+      "x2": 187,
+      "z2": -184,
+      "height": 4,
+      "thickness": 1
+    },
+    {
+      "id": "永和宫南墙",
+      "x1": 133,
+      "z1": -239,
+      "x2": 187,
+      "z2": -239,
+      "height": 4,
+      "thickness": 1
+    },
+    {
+      "id": "景阳宫南墙",
+      "x1": 133,
+      "z1": -296,
+      "x2": 187,
+      "z2": -296,
+      "height": 4,
+      "thickness": 1
+    },
+    {
+      "id": "axis--67--424",
+      "x1": -67,
+      "z1": -438,
+      "x2": -67,
+      "z2": -430,
+      "height": 5,
+      "thickness": 1.4
+    },
+    {
+      "id": "axis--67--335",
+      "x1": -67,
+      "z1": -418,
+      "x2": -67,
+      "z2": -341,
+      "height": 5,
+      "thickness": 1.4
+    },
+    {
+      "id": "axis--67--100",
+      "x1": -67,
+      "z1": -329,
+      "x2": -67,
+      "z2": -106,
+      "height": 5,
+      "thickness": 1.4
+    },
+    {
+      "id": "axis--67--18",
+      "x1": -67,
+      "z1": -94,
+      "x2": -67,
+      "z2": -24,
+      "height": 5,
+      "thickness": 1.4
+    },
+    {
+      "id": "axis--67-204",
+      "x1": -67,
+      "z1": -12,
+      "x2": -67,
+      "z2": 198,
+      "height": 5,
+      "thickness": 1.4
+    },
+    {
+      "id": "axis--67-298",
+      "x1": -67,
+      "z1": 210,
+      "x2": -67,
+      "z2": 292,
+      "height": 5,
+      "thickness": 1.4
+    },
+    {
+      "id": "axis--67-376",
+      "x1": -67,
+      "z1": 304,
+      "x2": -67,
+      "z2": 370,
+      "height": 5,
+      "thickness": 1.4
+    },
+    {
+      "id": "axis--67-end",
+      "x1": -67,
+      "z1": 382,
+      "x2": -67,
+      "z2": 394,
+      "height": 5,
+      "thickness": 1.4
+    },
+    {
+      "id": "axis-67--424",
+      "x1": 67,
+      "z1": -438,
+      "x2": 67,
+      "z2": -430,
+      "height": 5,
+      "thickness": 1.4
+    },
+    {
+      "id": "axis-67--335",
+      "x1": 67,
+      "z1": -418,
+      "x2": 67,
+      "z2": -341,
+      "height": 5,
+      "thickness": 1.4
+    },
+    {
+      "id": "axis-67--100",
+      "x1": 67,
+      "z1": -329,
+      "x2": 67,
+      "z2": -106,
+      "height": 5,
+      "thickness": 1.4
+    },
+    {
+      "id": "axis-67--18",
+      "x1": 67,
+      "z1": -94,
+      "x2": 67,
+      "z2": -24,
+      "height": 5,
+      "thickness": 1.4
+    },
+    {
+      "id": "axis-67-204",
+      "x1": 67,
+      "z1": -12,
+      "x2": 67,
+      "z2": 198,
+      "height": 5,
+      "thickness": 1.4
+    },
+    {
+      "id": "axis-67-298",
+      "x1": 67,
+      "z1": 210,
+      "x2": 67,
+      "z2": 292,
+      "height": 5,
+      "thickness": 1.4
+    },
+    {
+      "id": "axis-67-376",
+      "x1": 67,
+      "z1": 304,
+      "x2": 67,
+      "z2": 370,
+      "height": 5,
+      "thickness": 1.4
+    },
+    {
+      "id": "axis-67-end",
+      "x1": 67,
+      "z1": 382,
+      "x2": 67,
+      "z2": 394,
+      "height": 5,
+      "thickness": 1.4
+    }
+  ],
+  "plazas": [
+    {
+      "id": "太和门广场",
+      "x": 0,
+      "z": 244,
+      "w": 140,
+      "d": 90
+    },
+    {
+      "id": "乾清宫前庭",
+      "x": 0,
+      "z": -115,
+      "w": 136,
+      "d": 90
+    },
+    {
+      "id": "武英殿院",
+      "x": -228,
+      "z": 275,
+      "w": 128,
+      "d": 140
+    },
+    {
+      "id": "文华殿院",
+      "x": 221,
+      "z": 271,
+      "w": 132,
+      "d": 145
+    },
+    {
+      "id": "御花园",
+      "x": 0,
+      "z": -378,
+      "w": 136,
+      "d": 91
+    }
+  ],
+  "landmarks": [
+    {
+      "id": "wumen",
+      "name": "午门",
+      "x": 0,
+      "z": 466,
+      "instanceIds": [
+        "wumen"
+      ],
+      "evidence": "documented",
+      "sourceIds": [
+        "official-map"
+      ]
+    },
+    {
+      "id": "taihe-gate",
+      "name": "太和门",
+      "x": 0,
+      "z": 337,
+      "instanceIds": [
+        "taihe-gate"
+      ],
+      "evidence": "documented",
+      "sourceIds": [
+        "official-map"
+      ]
+    },
+    {
+      "id": "taihe-hall",
+      "name": "太和殿",
+      "x": 0,
+      "z": 151,
+      "instanceIds": [
+        "taihe-hall"
+      ],
+      "evidence": "documented",
+      "sourceIds": [
+        "official-map"
+      ]
+    },
+    {
+      "id": "zhonghe-hall",
+      "name": "中和殿",
+      "x": 0,
+      "z": 88,
+      "instanceIds": [
+        "zhonghe-hall"
+      ],
+      "evidence": "documented",
+      "sourceIds": [
+        "official-map"
+      ]
+    },
+    {
+      "id": "baohe-hall",
+      "name": "保和殿",
+      "x": 0,
+      "z": 34,
+      "instanceIds": [
+        "baohe-hall"
+      ],
+      "evidence": "documented",
+      "sourceIds": [
+        "official-map"
+      ]
+    },
+    {
+      "id": "qianqing-gate",
+      "name": "乾清门",
+      "x": 0,
+      "z": -62,
+      "instanceIds": [
+        "qianqing-gate"
+      ],
+      "evidence": "documented",
+      "sourceIds": [
+        "official-map"
+      ]
+    },
+    {
+      "id": "qianqing-palace",
+      "name": "乾清宫",
+      "x": 0,
+      "z": -189,
+      "instanceIds": [
+        "qianqing-palace"
+      ],
+      "evidence": "documented",
+      "sourceIds": [
+        "official-map"
+      ]
+    },
+    {
+      "id": "jiaotai-hall",
+      "name": "交泰殿",
+      "x": 0,
+      "z": -236,
+      "instanceIds": [
+        "jiaotai-hall"
+      ],
+      "evidence": "documented",
+      "sourceIds": [
+        "official-map"
+      ]
+    },
+    {
+      "id": "kunning-palace",
+      "name": "坤宁宫",
+      "x": 0,
+      "z": -285,
+      "instanceIds": [
+        "kunning-palace"
+      ],
+      "evidence": "documented",
+      "sourceIds": [
+        "official-map"
+      ]
+    },
+    {
+      "id": "imperial-garden",
+      "name": "御花园",
+      "x": 0,
+      "z": -369,
+      "instanceIds": [
+        "imperial-garden"
+      ],
+      "evidence": "documented",
+      "sourceIds": [
+        "official-map"
+      ]
+    },
+    {
+      "id": "shenwu-gate",
+      "name": "神武门",
+      "x": 0,
+      "z": -468,
+      "instanceIds": [
+        "shenwu-gate"
+      ],
+      "evidence": "documented",
+      "sourceIds": [
+        "official-map"
+      ]
+    }
+  ],
+  "enclosure": {
+    "width": 753,
+    "depth": 961,
+    "wallHeight": 10,
+    "moatWidth": 52
+  }
+}
