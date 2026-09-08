@@ -134,13 +134,14 @@ function makePeople(city){
 export class CityView{
   constructor(container){
     this.container=container;this.mode='3d';this.paused=false;this.disposed=false;this.time=0;this.onSelect=null;
+    container.__view=this;
     this.canvas=document.createElement('canvas');container.append(this.canvas);
     this.resizeObserver=new ResizeObserver(()=>this.resize());this.resizeObserver.observe(container);
     try{
       this.renderer=new T.WebGLRenderer({canvas:this.canvas,antialias:true,alpha:true,powerPreference:'high-performance'});this.renderer.setPixelRatio(Math.min(devicePixelRatio,1.7));this.renderer.shadowMap.enabled=true;this.renderer.shadowMap.type=T.PCFSoftShadowMap;this.renderer.outputColorSpace=T.SRGBColorSpace;this.renderer.toneMapping=T.ACESFilmicToneMapping;this.renderer.toneMappingExposure=1.18;
-      this.scene=new T.Scene();this.scene.background=new T.Color(0xebe7db);this.camera=new T.PerspectiveCamera(40,1,.15,4000);
+      this.scene=new T.Scene();this.scene.background=new T.Color(0xebe7db);this.camera=new T.PerspectiveCamera(54,1,.12,4000);
       this.scene.add(new T.HemisphereLight(0xfff8e7,0x898d78,2.2));const sun=new T.DirectionalLight(0xffefd2,3.0);sun.position.set(-28,58,34);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-65,right:65,top:60,bottom:-60,near:1,far:160});sun.shadow.bias=-.0004;sun.shadow.normalBias=.08;this.scene.add(sun);
-      this.controls=new OrbitControls(this.camera,this.canvas);this.controls.enableDamping=true;this.controls.dampingFactor=.075;this.controls.minDistance=10;this.controls.maxDistance=360;this.controls.maxPolarAngle=Math.PI*.49;this.controls.minPolarAngle=.08;this.controls.enablePan=true;this.controls.screenSpacePanning=true;
+      this.controls=new OrbitControls(this.camera,this.canvas);this.controls.enableDamping=true;this.controls.dampingFactor=.075;this.controls.minDistance=8;this.controls.maxDistance=360;this.controls.maxPolarAngle=Math.PI*.47;this.controls.minPolarAngle=.38;this.controls.enablePan=true;this.controls.screenSpacePanning=true;
       this.raycaster=new T.Raycaster();this.pointer=new T.Vector2();this.groundPlane=new T.Plane(new T.Vector3(0,1,0),0);this.hit=new T.Vector3();
       this.selection=new T.Mesh(new T.BoxGeometry(1,1,1),new T.MeshBasicMaterial({color:0xc7904b,transparent:true,opacity:.26,depthWrite:false}));this.selection.visible=false;this.scene.add(this.selection);
       this.canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();this.paused=true;container.dispatchEvent(new CustomEvent('view-error',{detail:'三维画面暂时中断，请刷新页面恢复。'}));});
@@ -162,7 +163,33 @@ export class CityView{
   }
   setMode(mode){if(!['3d','top','lots'].includes(mode))return;this.mode=!this.renderer&&mode==='3d'?'top':mode;if(this.renderer){if(this.world)this.world.visible=this.mode!=='lots';if(this.people)this.people.group.visible=this.mode!=='lots';if(this.lots)this.lots.visible=this.mode==='lots';this.controls.enableRotate=this.mode==='3d';this.fit();}else this.resize();}
   setPaused(paused){this.paused=!!paused;}
-  fit(){if(!this.renderer)return;this.controls.target.set(0,0,0);const span=this.city?Math.max(this.city.width,this.city.height):60;if(this.mode==='3d')this.camera.position.set(span*1.05,span*1.28,span*1.32);else this.camera.position.set(0,span*2.6,.01);this.camera.near=Math.max(.12,span*.002);this.camera.far=Math.max(1200,span*16);this.controls.minDistance=span*.2;this.controls.maxDistance=span*7;this.camera.lookAt(0,0,0);this.camera.updateProjectionMatrix();this.controls.update();this.resize();}
+  fit(){
+    if(!this.renderer)return;
+    this.controls.target.set(0,.4,0);
+    const span=this.city?Math.max(this.city.width,this.city.height):60;
+    if(this.mode==='3d'){
+      // Low 3/4 view from the south-east: near roofs read larger, far walls recede.
+      this.camera.fov=54;
+      this.camera.position.set(span*.40,span*.22,span*.58);
+      this.controls.minPolarAngle=.42;
+      this.controls.maxPolarAngle=Math.PI*.47;
+      this.controls.minDistance=Math.max(5,span*.1);
+      this.controls.maxDistance=span*5.5;
+    }else{
+      this.camera.fov=28;
+      this.camera.position.set(0,span*2.8,.01);
+      this.controls.minPolarAngle=0;
+      this.controls.maxPolarAngle=Math.PI*.49;
+      this.controls.minDistance=span*.2;
+      this.controls.maxDistance=span*7;
+    }
+    this.camera.near=Math.max(.1,span*.0015);
+    this.camera.far=Math.max(1400,span*18);
+    this.camera.lookAt(0,.4,0);
+    this.camera.updateProjectionMatrix();
+    this.controls.update();
+    this.resize();
+  }
   resize(){
     const w=Math.max(1,this.container.clientWidth),h=Math.max(1,this.container.clientHeight);
     if(this.renderer){this.renderer.setSize(w,h,false);this.camera.aspect=w/h;this.camera.updateProjectionMatrix();}

@@ -13,8 +13,8 @@ function planScene(map){const g=new T.Group(),mat=new T.MeshBasicMaterial({color
  for(const i of map.instances){if(getAsset(i.assetId).category==='附属')continue;add(colors[getAsset(i.assetId).category]||0x888277,i.x,i.z,i.w,i.d,i.rotation,.2);}
  for(const [color,items]of records){const m=new T.InstancedMesh(new T.BoxGeometry(1,.04,1),new T.MeshBasicMaterial({color}),items.length),o=new T.Object3D();items.forEach((i,n)=>{o.position.set(i.x,i.y,i.z);o.scale.set(i.w,1,i.d);o.rotation.y=-i.rotation;o.updateMatrix();m.setMatrixAt(n,o.matrix);});g.add(m);}return g;}
 export class HeritageView{
- constructor(container){this.container=container;this.mode='3d';this.onSelect=null;this.paused=false;this.alive=true;this.map=null;this.preview=null;this.size=100;this.time=0;this.flatZoom=1;this.flatOffset={x:0,z:0};this.events=[];
- try{this.renderer=new T.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});this.renderer.setPixelRatio(Math.min(globalThis.devicePixelRatio||1,1.65));this.renderer.setClearColor(0xebe7db);this.renderer.outputColorSpace=T.SRGBColorSpace;this.renderer.toneMapping=T.ACESFilmicToneMapping;this.renderer.toneMappingExposure=1.12;this.renderer.shadowMap.enabled=true;this.renderer.shadowMap.type=T.PCFSoftShadowMap;this.canvas=this.renderer.domElement;container.append(this.canvas);this.scene=new T.Scene();this.scene.add(new T.HemisphereLight(0xfff5e1,0x8c907a,2));this.sun=new T.DirectionalLight(0xffedcf,2.8);this.sun.position.set(-300,900,550);this.sun.castShadow=true;this.sun.shadow.mapSize.set(2048,2048);this.sun.shadow.bias=-.0004;this.sun.shadow.normalBias=.25;this.scene.add(this.sun);this.camera=new T.PerspectiveCamera(38,1,.5,50000);this.controls=new OrbitControls(this.camera,this.canvas);this.controls.enableDamping=true;this.controls.dampingFactor=.08;this.controls.maxPolarAngle=Math.PI*.49;this.controls.minPolarAngle=.1;this.controls.minDistance=8;this.controls.maxDistance=20000;this.controls.screenSpacePanning=true;this.ray=new T.Raycaster();this.pointer=new T.Vector2();this.hit=new T.Vector3();this.ground=new T.Plane(new T.Vector3(0,1,0),0);this.selection=new T.Mesh(new T.BoxGeometry(1,1,1),new T.MeshBasicMaterial({color:0xa8c098,transparent:true,opacity:.28,depthWrite:false}));this.selection.visible=false;this.scene.add(this.selection);
+ constructor(container){this.container=container;this.mode='3d';this.onSelect=null;this.paused=false;this.alive=true;this.map=null;this.preview=null;this.size=100;this.time=0;this.flatZoom=1;this.flatOffset={x:0,z:0};this.events=[];container.__view=this;
+ try{this.renderer=new T.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});this.renderer.setPixelRatio(Math.min(globalThis.devicePixelRatio||1,1.65));this.renderer.setClearColor(0xebe7db);this.renderer.outputColorSpace=T.SRGBColorSpace;this.renderer.toneMapping=T.ACESFilmicToneMapping;this.renderer.toneMappingExposure=1.12;this.renderer.shadowMap.enabled=true;this.renderer.shadowMap.type=T.PCFSoftShadowMap;this.canvas=this.renderer.domElement;container.append(this.canvas);this.scene=new T.Scene();this.scene.add(new T.HemisphereLight(0xfff5e1,0x8c907a,2));this.sun=new T.DirectionalLight(0xffedcf,2.8);this.sun.position.set(-300,900,550);this.sun.castShadow=true;this.sun.shadow.mapSize.set(2048,2048);this.sun.shadow.bias=-.0004;this.sun.shadow.normalBias=.25;this.scene.add(this.sun);this.camera=new T.PerspectiveCamera(52,1,.4,50000);this.controls=new OrbitControls(this.camera,this.canvas);this.controls.enableDamping=true;this.controls.dampingFactor=.08;this.controls.maxPolarAngle=Math.PI*.47;this.controls.minPolarAngle=.38;this.controls.minDistance=8;this.controls.maxDistance=20000;this.controls.screenSpacePanning=true;this.ray=new T.Raycaster();this.pointer=new T.Vector2();this.hit=new T.Vector3();this.ground=new T.Plane(new T.Vector3(0,1,0),0);this.selection=new T.Mesh(new T.BoxGeometry(1,1,1),new T.MeshBasicMaterial({color:0xa8c098,transparent:true,opacity:.28,depthWrite:false}));this.selection.visible=false;this.scene.add(this.selection);
  this.listen('webglcontextlost',e=>{e.preventDefault();this.paused=true;container.dispatchEvent(new CustomEvent('view-error',{detail:'三维上下文已中断，请刷新恢复。'}));});
  }catch(e){this.renderer?.dispose();this.renderer?.domElement.remove();this.renderer=null;this.canvas=document.createElement('canvas');container.append(this.canvas);this.ctx=this.canvas.getContext('2d');this.fallbackReason='当前设备无法开启 WebGL，已显示可缩放的二维布局。';this.mode='top';}
  this.canvas.style.touchAction='none';this.listen('pointerdown',e=>{this.press={x:e.clientX,y:e.clientY,lastX:e.clientX,lastY:e.clientY,moved:false};if(!this.renderer)this.canvas.setPointerCapture?.(e.pointerId);});
@@ -30,8 +30,58 @@ export class HeritageView{
  animate(dt){this.time+=dt;for(const w of this.walkers||[]){w.t+=dt*w.speed/w.len*w.direction;if(w.t>1){w.t=1;w.direction=-1;}if(w.t<0){w.t=0;w.direction=1;}const x=w.a[0]+(w.b[0]-w.a[0])*w.t,z=w.a[1]+(w.b[1]-w.a[1])*w.t;w.node.position.set(x,bridgeDeckHeight(this.map,x,z),z);w.node.rotation.y=Math.atan2((w.b[0]-w.a[0])*w.direction,(w.b[1]-w.a[1])*w.direction);for(const n of w.node.children)if(n.name.startsWith('leg-')||n.name.startsWith('arm-'))n.rotation.x=Math.sin(this.time*7+w.phase)*(n.name.endsWith('left')?1:-1)*.19;}}
  setMode(mode){if(!['3d','top','lots'].includes(mode))return;this.mode=this.renderer?mode:mode==='3d'?'top':mode;if(this.controls){this.controls.enableRotate=this.mode==='3d';if(this.group)this.group.visible=this.mode!=='lots'||!!this.preview;if(this.lots)this.lots.visible=this.mode==='lots'&&!this.preview;this.fit();}else this.draw2d();}
  setPaused(v){this.paused=!!v;}
- fit(){this.flatZoom=1;this.flatOffset={x:0,z:0};if(!this.renderer){this.draw2d();return;}const box=this.group?new T.Box3().setFromObject(this.group):new T.Box3(new T.Vector3(-50,0,-50),new T.Vector3(50,10,50)),center=box.getCenter(new T.Vector3()),extent=box.getSize(new T.Vector3());if(!this.preview)center.set(0,0,0);this.controls.target.copy(center);const span=Math.max(this.size,extent.x,extent.z,extent.length()*.45);const dist=(span*.7)/Math.tan(this.camera.fov*Math.PI/360);const direction=this.mode==='3d'?new T.Vector3(this.preview?.8:.48,1.02,1.32).normalize():new T.Vector3(0,1,.0001);this.camera.position.copy(center).add(direction.multiplyScalar(this.mode==='3d'?dist:span*2.15));this.camera.near=Math.max(.25,span*.001);this.camera.far=Math.max(5000,span*20);this.controls.minDistance=Math.max(6,span*.05);this.controls.maxDistance=span*9;this.camera.lookAt(center);this.camera.updateProjectionMatrix();this.fitBox=box;this.resize();this.controls.update();
- const r=span*.75;Object.assign(this.sun.shadow.camera,{left:-r,right:r,top:r,bottom:-r,near:1,far:span*6});this.sun.position.set(-span*.5,span*1.7,span);this.sun.shadow.camera.updateProjectionMatrix();}
+ fit(){
+  this.flatZoom=1;this.flatOffset={x:0,z:0};
+  if(!this.renderer){this.draw2d();return;}
+  const box=this.group?new T.Box3().setFromObject(this.group):new T.Box3(new T.Vector3(-50,0,-50),new T.Vector3(50,10,50));
+  const center=box.getCenter(new T.Vector3());
+  const extent=box.getSize(new T.Vector3());
+  if(!this.preview)center.set(0,0,0);
+  this.controls.target.copy(center);
+  const bw=this.map?.bounds?.width||this.size, bd=this.map?.bounds?.depth||this.size;
+  const span=this.preview
+    ? Math.max(extent.x,extent.y,extent.z,this.size)
+    : (bw>bd*1.3?Math.max(bd*1.4,bw*.6):Math.max(bd,bw*.42));
+  let direction,dist;
+  if(this.mode!=='3d'){
+    this.camera.fov=28;
+    direction=new T.Vector3(0,1,.0001);
+    dist=span*2.2;
+    this.controls.minPolarAngle=0;
+    this.controls.maxPolarAngle=Math.PI*.49;
+  }else if(this.preview){
+    this.camera.fov=40;
+    this.controls.target.set(center.x,extent.y*.35,center.z);
+    direction=new T.Vector3(.85,.62,1.02).normalize();
+    dist=(Math.max(extent.x,extent.y,extent.z)*1.15)/Math.tan(this.camera.fov*Math.PI/360);
+    this.controls.minPolarAngle=.18;
+    this.controls.maxPolarAngle=Math.PI*.48;
+  }else{
+    // South-southeast, low enough that near gates dwarf the far halls (近大远小).
+    this.camera.fov=52;
+    if(this.map?.id==='qingming-scroll'){
+      this.controls.target.set(70,8,55);
+      direction=new T.Vector3(.38,.3,.95).normalize();
+    }else{
+      this.controls.target.set(0,Math.min(14,span*.012),span*.1);
+      direction=new T.Vector3(.22,.26,.92).normalize();
+    }
+    dist=(span*.34)/Math.tan(this.camera.fov*Math.PI/360);
+    this.controls.minPolarAngle=.38;
+    this.controls.maxPolarAngle=Math.PI*.47;
+  }
+  this.camera.position.copy(this.controls.target).add(direction.multiplyScalar(dist));
+  this.camera.near=Math.max(.2,span*.0008);
+  this.camera.far=Math.max(6000,span*22);
+  this.controls.minDistance=Math.max(5,this.preview?span*.35:span*.08);
+  this.controls.maxDistance=span*8;
+  this.camera.lookAt(this.controls.target);
+  this.camera.updateProjectionMatrix();
+  this.fitBox=box;
+  this.resize();
+  this.controls.update();
+  const r=span*.75;Object.assign(this.sun.shadow.camera,{left:-r,right:r,top:r,bottom:-r,near:1,far:span*6});this.sun.position.set(-span*.5,span*1.7,span);this.sun.shadow.camera.updateProjectionMatrix();
+ }
  resize(){const w=Math.max(1,this.container.clientWidth||600),h=Math.max(1,this.container.clientHeight||500);if(this.renderer){this.renderer.setSize(w,h,false);this.camera.aspect=w/h;this.camera.updateProjectionMatrix();}else{const ratio=Math.min(globalThis.devicePixelRatio||1,2);this.canvas.width=w*ratio;this.canvas.height=h*ratio;this.canvas.style.width=w+'px';this.canvas.style.height=h+'px';this.draw2d();}}
  focusLandmark(id){const l=this.map?.landmarks.find(l=>l.id===id);if(!l)return;if(this.preview)this.setCity(this.map);if(this.renderer){const target=new T.Vector3(l.x,0,l.z),dir=this.camera.position.clone().sub(this.controls.target).normalize(),close=this.map.id==='qingming-scroll'?220:260;this.controls.target.copy(target);this.camera.position.copy(target).add(dir.multiplyScalar(close));this.camera.updateProjectionMatrix();this.controls.update();}else{this.flatOffset={x:l.x,z:l.z};this.flatZoom=4;this.draw2d();}const i=this.map.instances.find(i=>l.instanceIds.includes(i.id));this.select(i||null);}
  previewAsset(assetId,params={}){const a=getAsset(assetId);if(!a)throw new RangeError('未知资源');this.clear();this.preview=assetId;this.previewParams={...a.defaultSize,...params};this.size=Math.max(this.previewParams.w,this.previewParams.d,this.previewParams.h)*1.25;if(this.renderer){this.group=buildAssetScene(assetId,params);this.scene.add(this.group);this.mode='3d';this.controls.enableRotate=true;this.fit();}else{this.flatZoom=1;this.draw2d();}}
