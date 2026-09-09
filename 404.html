@@ -7,7 +7,7 @@
     <script>
       (function () {
         var path = location.pathname || "/";
-        var apps = ["/nexora/", "/nightfield/", "/voxel-cast/", "/velora/", "/chi-ji-red/", "/a129-bfx-design/"];
+        var apps = ["/nexora/", "/nightfield/", "/voxel-cast/", "/velora/", "/chi-ji-red/", "/a129-bfx-design/", "/a129-cosmopolis/"];
         var hit = apps.find(function (p) { return path.indexOf(p) === 0; });
         if (hit) {
           try { sessionStorage.setItem("spa-redirect", path + location.search + location.hash); } catch (e) {}
