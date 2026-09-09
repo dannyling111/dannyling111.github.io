@@ -7,7 +7,7 @@
     <script>
       (function () {
         var path = location.pathname || "/";
-        var apps = ["/nexora/", "/nightfield/", "/voxel-cast/", "/velora/", "/chi-ji-red/", "/a129-bfx-design/", "/a129-cosmopolis/", "/a129-kirie/", "/a129-ancient-city/", "/a129-noir-atlas/", "/a129-quanton/"];
+        var apps = ["/nexora/", "/nightfield/", "/voxel-cast/", "/velora/", "/chi-ji-red/", "/a129-bfx-design/", "/a129-cosmopolis/", "/a129-kirie/", "/a129-ancient-city/", "/a129-noir-atlas/", "/a129-quanton/", "/a129-atelier/"];
         var hit = apps.find(function (p) { return path.indexOf(p) === 0; });
         if (hit) {
           try { sessionStorage.setItem("spa-redirect", path + location.search + location.hash); } catch (e) {}
