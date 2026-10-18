@@ -1,0 +1,143 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>html{color-scheme:light}body{margin:0;font-size:14px}img{max-width:100%}[hidden]{display:none!important}</style></head><body><title>宏观频道观点追踪</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;900&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: 左侧时间线式的"观点矩阵"在上（扫读），频道分区的视频卡在下（细读）；像一张交易台的晨会纸 */
+:root{
+  --bg:#f6f7f9; --panel:#ffffff; --ink:#15202b; --muted:#5b6876; --line:#dfe3e8;
+  --accent:#1f4e8c; --bull:#1d7a4c; --bull-bg:#e3f3ea; --bear:#b2362b; --bear-bg:#f8e4e1;
+  --neutral:#7a6a2e; --neutral-bg:#f3eed9; --na:#9aa4ae; --na-bg:#eef0f3;
+  --display:"Noto Serif SC","Songti SC",serif; --body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f141a; --panel:#161d25; --ink:#e6ebf0; --muted:#93a1ae; --line:#26313c;
+  --accent:#7fb0ef; --bull:#5fd39a; --bull-bg:#173326; --bear:#f08a7e; --bear-bg:#3a1e1b;
+  --neutral:#d8c27a; --neutral-bg:#33301f; --na:#6c7884; --na-bg:#1c242d; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f141a; --panel:#161d25; --ink:#e6ebf0; --muted:#93a1ae; --line:#26313c;
+  --accent:#7fb0ef; --bull:#5fd39a; --bull-bg:#173326; --bear:#f08a7e; --bear-bg:#3a1e1b;
+  --neutral:#d8c27a; --neutral-bg:#33301f; --na:#6c7884; --na-bg:#1c242d; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.65}
+.wrap{max-width:1080px;margin:0 auto;padding-block:28px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:28px}
+header{display:grid;gap:10px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--display);font-weight:900;font-size:clamp(28px,5vw,40px);line-height:1.15;margin:0;text-wrap:balance}
+h2{font-family:var(--display);font-weight:600;font-size:22px;margin:0;text-wrap:balance}
+.lede{color:var(--muted);max-width:65ch;margin:0}
+.stats{display:flex;flex-wrap:wrap;gap:8px 20px;font-family:var(--mono);font-size:13px;color:var(--muted)}
+.stats b{color:var(--ink);font-weight:500;font-variant-numeric:tabular-nums}
+.legend{display:flex;flex-wrap:wrap;gap:8px;font-size:12px}
+.chip{display:inline-flex;align-items:center;justify-content:center;min-width:44px;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:500;white-space:nowrap}
+.v-看多{background:var(--bull-bg);color:var(--bull)} .v-看空{background:var(--bear-bg);color:var(--bear)}
+.v-中性{background:var(--neutral-bg);color:var(--neutral)} .v-未提及{background:var(--na-bg);color:var(--na)}
+.matrix-box{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+th{font-weight:500;color:var(--muted);font-size:12px;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+td.vid{min-width:220px}
+td.vid a{color:var(--ink);text-decoration:none;font-weight:500}
+td.vid a:hover{color:var(--accent);text-decoration:underline}
+.date{font-family:var(--mono);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.channel{display:grid;gap:14px}
+.channel-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;border-bottom:2px solid var(--ink);padding-bottom:8px}
+.channel-head .meta{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.cards{display:grid;gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;display:grid;gap:10px;min-width:0}
+.card h3{margin:0;font-size:17px;line-height:1.4;text-wrap:balance}
+.card h3 a{color:var(--ink);text-decoration:none} .card h3 a:hover{color:var(--accent)}
+.row{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.ev{font-family:var(--mono);font-size:11px;letter-spacing:.04em;padding:1px 7px;border-radius:4px;border:1px solid var(--line);color:var(--muted)}
+.ev.transcript{border-color:var(--bull);color:var(--bull)} .ev.title_only{border-color:var(--bear);color:var(--bear)}
+.thesis{font-size:15px;margin:0;max-width:72ch;border-left:3px solid var(--accent);padding-left:12px}
+ul.points{margin:0;padding-left:20px;display:grid;gap:4px;max-width:72ch}
+.views{display:flex;flex-wrap:wrap;gap:6px}
+.views span.k{font-size:12px;color:var(--muted);margin-right:2px}
+details{border-top:1px dashed var(--line);padding-top:8px}
+summary{cursor:pointer;color:var(--accent);font-size:13px}
+summary:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.claims{overflow-x:auto;margin-top:8px}
+.claims td.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.claims td.ts a{font-family:var(--mono);font-size:12px;color:var(--accent)}
+.verify{font-size:12px;font-family:var(--mono)}
+.verify.ok{color:var(--bull)} .verify.pending{color:var(--neutral)} .verify.bad{color:var(--bear)}
+.summary-md{white-space:pre-wrap;font-size:14px;color:var(--ink);max-width:72ch;margin:0}
+footer{color:var(--muted);font-size:13px;display:grid;gap:6px;max-width:72ch}
+@media (max-width:560px){ .card{padding:14px} }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">FlowDuo · YT 宏观长跑 v3 · Gemini 采集 / Claude 验收</div>
+    <h1>宏观频道观点追踪</h1>
+    <p class="lede">主流中文宏观与投资类 YouTube 频道逐条视频的核心论点、关键数据与资产方向判断。按月份往回滚动扩展，每批数据经抽查验收后才上页。</p>
+    <div class="stats" id="stats"></div>
+    <div class="legend"><span class="chip v-看多">看多</span><span class="chip v-看空">看空</span><span class="chip v-中性">中性</span><span class="chip v-未提及">未提及</span></div>
+  </header>
+
+  <section style="display:grid;gap:12px">
+    <h2>资产观点矩阵</h2>
+    <div class="matrix-box"><table id="matrix"></table></div>
+  </section>
+
+  <div id="channels" style="display:grid;gap:32px"></div>
+
+  <footer>
+    <div>采集方：Gemini（依据类型如实标注：transcript 字幕 / description 简介 / title_only 仅标题）。验收方：Claude 每批抽查视频真实性并评分。</div>
+    <div>页面只收录要点与概括，不转载字幕原文。点击视频标题前往 YouTube 观看原片。</div>
+    <div id="updated"></div>
+  </footer>
+</div>
+
+<script>
+const DATA = [{"channel": "小Lin说", "window": "M1 · 2026-09-18 ~ 10-18", "verdict": "PASS 88", "summary": "", "verify": {}, "videos": [{"channel": "小Lin说", "video_id": "wu0zS1AuI_E", "url": "http://www.youtube.com/watch?v=wu0zS1AuI_E", "title": "史上最大现金收购案 富二代如何正确拼爹", "publish_date": "2026-10-09", "duration": "13:54", "views": "1,297,837 (采集时间 2026-10-18 18:35 JST)", "topic_tags": ["资本并购", "好莱坞", "派拉蒙", "华纳兄弟", "甲骨文", "恶意收购", "杠杆收购", "反垄断"], "core_thesis": "甲骨文创始人家族通过派拉蒙上市公司壳资源撬动中东主权基金与银行杠杆，借助政商博弈击败奈飞，以1109亿美元全现金世纪收购华纳兄弟实现蛇吞象。", "key_points": ["David Ellison通过仅占6%投票权的A类股定点突破雷石东家族，仅用84亿美元便拿下派拉蒙控制权，保留其上市地位作为融资平台壳资源。", "在竞购华纳兄弟遭遇奈飞低价截胡时，老爹Larry Ellison出具404亿美元不可撤销个人担保，打消华纳董事会对中东资金违约的顾虑。", "巧借中东万亿美元对美投资承诺与特朗普政府对CNN的监管态度，触发司法部反垄断调查，逼退奈飞达成世纪收购。"], "data_claims": [{"claim": "派拉蒙收购华纳兄弟总金额（全现金含债务承接）", "number": "1109亿美元", "ts": "00:00:18"}, {"claim": "甲骨文创始人Larry Ellison身价", "number": "2000亿美元", "ts": "00:00:59"}, {"claim": "派拉蒙与华纳兄弟此前两年股价跌幅", "number": ">70%", "ts": "00:02:15"}, {"claim": "收购前派拉蒙市值", "number": "<100亿美元", "ts": "00:02:19"}, {"claim": "派拉蒙A类股占比与雷石东控制权比例", "number": "6% A类股中雷石东控制77%", "ts": "00:02:41"}, {"claim": "向雷石东单独收购溢价与总对价", "number": "溢价75%，24亿美元", "ts": "00:03:30"}, {"claim": "拿下派拉蒙控股权总出资", "number": "Ellison父子约60亿+盟友24亿，共84亿获70%股权及100%控制权", "ts": "00:03:53"}, {"claim": "华纳首轮报价与股价溢价", "number": "19美元/股（溢价60%），6成现金4成股票", "ts": "00:05:19"}, {"claim": "收购华纳融资结构", "number": "银行与私募借款540亿，股权融资400余亿（老爹100多亿+3家中东主权基金）", "ts": "00:07:48"}, {"claim": "老爹Larry Ellison不可撤销个人担保额", "number": "404亿美元", "ts": "00:09:09"}, {"claim": "甲骨文股价自9月高点回撤幅度", "number": "40%", "ts": "00:09:39"}, {"claim": "最终华纳被收购总对价与承接债务", "number": "付股东现款+承接300亿债务，总计1109亿美元", "ts": "00:12:06"}], "macro_view": {"美股": "中性", "A股/港股": "未提及", "美债利率": "未提及", "美元": "中性", "黄金": "未提及", "中国经济": "未提及", "加密": "未提及"}, "evidence": "transcript"}, {"channel": "小Lin说", "video_id": "R1-j8TFlqCo", "url": "http://www.youtube.com/watch?v=R1-j8TFlqCo", "title": "【硬核】俄乌打了四年多，到底谁在买单？", "publish_date": "2026-09-22", "duration": "29:57", "views": "3,130,825 (采集时间 2026-10-18 18:35 JST)", "topic_tags": ["俄乌战争", "宏观经济", "战时经济", "通货膨胀", "主权基金", "外汇储备", "无人机产业", "欧美援助"], "core_thesis": "四年俄乌战事演变为消耗战：俄罗斯靠能源外汇与黄金储备透支财政进行军工化过热狂飙；乌克兰国内产能瘫痪完全依赖欧美输血与IMF严苛监管，双方均在消耗借来的资本。", "key_points": ["俄罗斯央行行长纳比乌琳娜暴力加息至20-21%稳汇率，俄经济短期靠能源红利与军工投资刺激，但民间投资被严重挤出、劳动力极度短缺（失业率异常走低）、通胀两度抬头，2025-2026年GDP增速降至1%左右陷慢性病。", "乌克兰2022年GDP断崖暴跌28.8%，战时40%劳动力流失；政府债务率飙升，战事完全靠欧美3500亿欧元直接援助（美占33%、欧占59%）及IMF附加高额附加费与严苛财政纪律的贷款维系。", "俄罗斯被冻结的3000亿外汇储备中，欧洲主要机构Euroclear冻结其2/3，欧美利用其利息流作为担保向乌克兰发放数百亿贷款，而俄则被迫消耗主权财富基金并出售48%流动黄金以弥补赤字。", "战时重塑产业格局：两国传统民用工业被严重挤占，但均爆发性催生无人机产业链（俄阿拉布加基地年产6万架低成本自杀式无人机，乌克兰线上BF One积分调度平台年产能冲刺千万架）。"], "data_claims": [{"claim": "俄罗斯被冻结外汇储备总额", "number": "3000亿美元", "ts": "00:01:28"}, {"claim": "2022年俄央行暴力提息幅度", "number": "从9.5%提至20%", "ts": "00:02:25"}, {"claim": "2022年俄罗斯与乌克兰GDP增速", "number": "俄罗斯萎缩1.4%，乌克兰萎缩28.8%", "ts": "00:02:50"}, {"claim": "乌克兰外逃难民与流离失所人数", "number": "外逃难民约800万，全国流离失所1600万（占战前4100万的40%）", "ts": "00:03:23"}, {"claim": "2023-2024年俄罗斯GDP增速及军费刺激", "number": "连续两年GDP增速超4%", "ts": "00:05:11"}, {"claim": "俄罗斯通胀与二次加息水平", "number": "通胀从23年不足3%攀升至24年底近10%，利率拔至21%", "ts": "00:05:30"}, {"claim": "美欧对乌克兰年化援助规模", "number": "每年600亿至800亿美元", "ts": "00:06:05"}, {"claim": "欧盟对乌900亿欧元借款方案", "number": "900亿欧元", "ts": "00:07:27"}, {"claim": "2025-2026年俄罗斯GDP预测", "number": "回落至1.0%左右徘徊", "ts": "00:08:03"}, {"claim": "双方伤亡及非交战劳动力削减", "number": "乌非交战劳动力减少40%；俄劳动报酬占GDP比重从41%上升至47.5%", "ts": "00:11:42"}, {"claim": "俄罗斯军费占GDP比例翻倍", "number": "从2021年的3.7%翻倍至2025年的7.5%（有机构预计>10%），乌克兰军费开支占GDP 35%-40%", "ts": "00:14:54"}, {"claim": "乌克兰累计直接援助总额及出资构成", "number": "截至2026年初约3500亿欧元，美国33%、欧洲59%", "ts": "00:19:55"}, {"claim": "俄罗斯主权财富基金持金与24年底抛售", "number": "持有500吨黄金，24年底出售了48%流动黄金", "ts": "00:18:26"}, {"claim": "沙赫德无人机单架成本对比爱国者拦截弹", "number": "沙赫德成本5万美元 vs 爱国者导弹400万美元", "ts": "00:26:02"}, {"claim": "阿拉布加工厂无人机年产能与工人规模", "number": "2025年产能近6万架，宿舍扩展至容纳4万人", "ts": "00:27:14"}], "macro_view": {"美股": "未提及", "A股/港股": "未提及", "美债利率": "看多", "美元": "看空", "黄金": "看多", "中国经济": "中性", "加密": "未提及"}, "evidence": "transcript"}]}];
+const META = {"updated": "2026-10-18 19:47 JST"};
+const ASSETS = ["美股","A股/港股","美债利率","美元","黄金","中国经济","加密"];
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const chip = v => `<span class="chip v-${esc(v||"未提及")}">${esc(v||"未提及")}</span>`;
+const tsLink = (url, ts) => {
+  if (!ts) return "";
+  const p = String(ts).split(":").map(Number); let s = 0; p.forEach(n => s = s*60 + (n||0));
+  const sep = url.includes("?") ? "&" : "?";
+  return `<a href="${esc(url)}${sep}t=${s}s" target="_blank" rel="noopener">${esc(ts)}</a>`;
+};
+const all = DATA.flatMap(u => u.videos.map(v => ({...v, _unit:u})));
+all.sort((a,b) => String(b.publish_date).localeCompare(String(a.publish_date)));
+
+const chans = [...new Set(DATA.map(u => u.channel))];
+document.getElementById("stats").innerHTML =
+  `<span>频道 <b>${chans.length}</b></span><span>视频 <b>${all.length}</b></span>` +
+  `<span>批次 <b>${DATA.length}</b></span><span>时间窗 <b>${esc([...new Set(DATA.map(u=>u.window))].join(" · "))}</b></span>`;
+
+document.getElementById("matrix").innerHTML =
+  `<thead><tr><th>日期</th><th>频道 · 视频</th>${ASSETS.map(a=>`<th>${a}</th>`).join("")}</tr></thead><tbody>` +
+  all.map(v => `<tr><td class="date">${esc(v.publish_date)}</td>
+    <td class="vid"><div style="font-size:12px;color:var(--muted)">${esc(v.channel)}</div><a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.title)}</a></td>
+    ${ASSETS.map(a => `<td>${chip((v.macro_view||{})[a])}</td>`).join("")}</tr>`).join("") + `</tbody>`;
+
+document.getElementById("channels").innerHTML = chans.map(ch => {
+  const units = DATA.filter(u => u.channel === ch);
+  return `<section class="channel"><div class="channel-head"><h2>${esc(ch)}</h2>
+    <span class="meta">${units.map(u => `${esc(u.window)} · ${u.videos.length} 条 · ${esc(u.verdict)}`).join("　")}</span></div>
+    ${units.map(u => `${u.summary ? `<details><summary>${esc(u.window)} 月度综述</summary><p class="summary-md">${esc(u.summary)}</p></details>` : ""}
+    <div class="cards">${u.videos.slice().sort((a,b)=>String(b.publish_date).localeCompare(String(a.publish_date))).map(v => `
+      <article class="card">
+        <div class="row"><span class="date">${esc(v.publish_date)} · ${esc(v.duration)}</span><span class="date">${esc(v.views)}</span>
+          <span class="ev ${esc(v.evidence)}">${esc(v.evidence)}</span>
+          <span class="verify ${esc((u.verify||{})[v.video_id]||"pending")}">${({ok:"✓ 已核验",pending:"… 待核验",bad:"✕ 核验失败"})[(u.verify||{})[v.video_id]||"pending"]}</span></div>
+        <h3><a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.title)}</a></h3>
+        <p class="thesis">${esc(v.core_thesis)}</p>
+        <ul class="points">${(v.key_points||[]).map(k=>`<li>${esc(k)}</li>`).join("")}</ul>
+        <div class="views">${ASSETS.map(a=>`<span><span class="k">${a}</span>${chip((v.macro_view||{})[a])}</span>`).join("")}</div>
+        ${(v.data_claims||[]).length ? `<details><summary>关键数据 ${v.data_claims.length} 条</summary><div class="claims"><table>
+          <thead><tr><th>说法</th><th>数字</th><th>时间点</th></tr></thead><tbody>
+          ${v.data_claims.map(c=>`<tr><td>${esc(c.claim)}</td><td class="num">${esc(c.number)}</td><td class="ts">${tsLink(v.url,c.ts)}</td></tr>`).join("")}
+          </tbody></table></div></details>` : ""}
+      </article>`).join("")}</div>`).join("")}
+  </section>`;
+}).join("");
+document.getElementById("updated").textContent = "最近更新：" + META.updated;
+</script>
+</body></html>
